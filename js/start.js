@@ -1,7 +1,7 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
-let Lovescore = 0;
+let Lovescore = 50;
 const endpoint = 10;
 select=[];
 
@@ -79,7 +79,7 @@ function addAnswer(answerText, qIdx, idx){
         }
         setTimeout(() => {
             select[qIdx] = idx;
-            Lovescore += 5*(qnaList[qIdx]['a'][idx]['score'])
+            Lovescore += 5*((qnaList[qIdx]['a'][idx]['score'])-1)
             for(let i=0; i < children.length; i++){
                 children[i].style.display='none';
             }
