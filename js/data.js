@@ -1,16 +1,16 @@
 /*
- 'mouse',  0
+ 0,  0
  1,  1
  2,  2
- 'rabbit',  3
+ 3,  3
  4,  4
- 'snake',  5
- 'horse',  6
- 'sheep',  7
- 'monkey',  8
+ 5,  5
+ 6,  6
+ 7,  7
+ 8,  8
  9,  9
- 'dog',  10
- 'pig',  11 
+,  10
+ 11,  11 
 */ 
  
  
@@ -18,98 +18,81 @@
   {
     q: '1. 안녕하세요..! 저 리오라고 해요..!',
     a: [
-      { answer: 'a. 웃는 게 귀여우시네요 ㅎㅎ 잘 부탁드려요!', type: [1, 2, 4, 9] },
-      { answer: 'b. 첫눈에 반했습니다..!', type: ['mouse', 'rabbit', 'horse', 'snake', 'dog', 'monkey'] },
-      { answer: 'c. 만나서 반가워요!!', type: ['sheep', 'pig' ] },
+      { answer: 'a. 웃는 게 귀여우시네요 ㅎㅎ 잘 부탁드려요!', score : 2},
+      { answer: 'b. 첫눈에 반했습니다..!', score : 1},
+      { answer: 'c. 만나서 반가워요!!', score : 0 },
     ]
   },
   {
     q: '2. 저희 혹시 말 놓을까요?',
     a: [
-      { answer: 'a. 아… 초면에 그건 좀 힘들 것 같아요. ', type: ['mouse', 'rabbit', 2, 'monkey'] },
-      { answer: 'b. 그래! ', type: [1, 'horse', 'snake', 'dog'] },
-      { answer: 'c. 그럴까요? 말 편하게 하세요! ', type: ['sheep', 4, 9, 'pig'] },
+      { answer: 'a. 아… 초면에 그건 좀 힘들 것 같아요. ', score : 0 },
+      { answer: 'b. 그래! ', score : 2},
+      { answer: 'c. 그럴까요? 말 편하게 하세요! ', score : 1},
     ]
   },
   {
     q: '3. 넌 좋아하는 노래 장르가 어떻게 돼?',
     a: [
-      { answer: 'a. 힙합.', type: [1, 'rabbit', 2, 'dog', 'monkey'] },
-      { answer: 'b. 발라드.', type: ['sheep', 9, 'pig'] },
-      { answer: 'c. 밴드.', type: ['mouse', 'horse', 'snake', 4] }
+      { answer: 'a. 힙합.', score : 0},
+      { answer: 'b. 발라드.', score : 1},
+      { answer: 'c. 밴드.', score : 2 }
     ]
   },
   {
     q: '4. 뭐 먹을래?',
     a: [
-      { answer: 'a. 박력 그 자체, "야 나랑 사귀자" ', type: [1, 2, 4 ] },
-      { answer: 'b. 섬세한 "나 너 많이 좋아해, 나랑 사귈래?" ', type: ['sheep', 'dog', 'monkey', 9, 'pig' ] },
-      { answer: 'c. 센스있는 "우리 내일은 연인으로 만날까요" ', type: ['mouse', 'rabbit', 'horse', 'snake' ] },
+      { answer: 'a. 타코야끼', score : 1},
+      { answer: 'b. 불초밥', score : 2},
+      { answer: 'c. 닭꼬치', score : 0},
     ]
   },
   {
     q: '5. 맛있는 불초밥이다! 바로 앞 계단에 단 둘이 앉게 되었다. 한창 맛있게 먹던 흰 옷을 입은 리오, 팔 바로 옆에 소스를 흘린다. 닦아주려고 하는데, 리오 : 아 괜찮아~ 이따가 닦으면 돼~',
     a: [
-      { answer: 'a. 쑥스러워.. 손 잡기 정도??', type: [1, 'sheep', 'dog', 4, 9 ] },
-      { answer: 'b. 요즘 시대가 어느 때인데, 가벼운 뽀뽀까지 가능이야', type: ['mouse', 'rabbit', 'horse', 'pig']},
-      { answer: 'c. 어차피 내 연인인데 왜?? 모든 스킨십 다 돼!', type: [2, 'snake', 'monkey'] },
+      { answer: 'a.그래도 바로 닦아준다', score : 2 },
+      { answer: 'b. 다 먹고 닦는다', score : 1},
+      { answer: 'c. 그냥 가만히 있는다', score : 0},
     ]
   },
 
   {
-    q: '6. 기념일이 다가온다. 당신은 어떻게 할 것인가? (ex - 100, 200일)',
+    q: '6. 밥도 먹었는데, 이제 뭐할까?',
     a: [
-      { answer: 'a. 무슨 기념일이야, 그냥 평소처럼 해', type: [4, 9, 'pig' ] },
-      { answer: 'b. 맛있는 밥이나 사줄까? 아니면 꽃이라도?', type: ['mouse', 'rabbit', 'horse', 'dog' ] },
-      { answer: 'c. 이미 깜짝 이벤트 다 준비해놨어', type: [1, 'sheep', 2, 'snake', 'monkey' ] },
+      { answer: 'a. 같이 부스 구경 가는거 어때?', score : 2},
+      { answer: 'b. (해맑게) 이제 집 가야지!', score : 0 },
+      { answer: 'c. 우리 카페 갈래?', score : 1},
     ]
   },
   {
-    q: '7. 연인이 오늘 머리를 바꾸고 옷도 새로 샀다',
+    q: '7. 우리 만났는데, 이제 뭐할까?',
     a: [
-      { answer: 'a. 눈치 못 채고 그냥 있는다', type: [1, 'sheep', 'pig' ] },
-      { answer: 'b. 눈치는 채나 말은 꺼내지 않는다', type: [2, 4, 9 ] },
-      { answer: 'c. "오 대박 오늘 머리도 바꾸고 옷도 새로 샀네?"라고 하며 단번에 눈치챈다', type: ['mouse', 'rabbit', 'horse', 'snake', 'dog', 'monkey' ] },
+      { answer: 'a. 음... 같이 산책할래?', score : 1 },
+      { answer: 'b. 음.. 그러게? 뭐할까?', score : 0 },
+      { answer: 'c. 음... 저기 캠핑 공연 보러갈까? ', score : 2 },
     ]
   },
   {
-    q: '8. 연인이 데이트가 끝난 후, 집에 데려다 달라고 한다',
+    q: '8. 있잖아, 나 너가 노래하는 것도 들어보고 싶어! 노래 불러줘! ㅎ',
     a: [
-      { answer: 'a. 각자 만났던 장소에서 헤어진다.', type: ['mouse', 4, 9 ] },
-      { answer: 'b. 연인이 살고 있는 집의 역이나 정류장까지 데려다준다.', type: ['rabbit', 2, 'horse', 'snake', 'dog', 'monkey' ] },
-      { answer: 'c. 집 앞까지 데려다준다.', type: [1, 'sheep', 'pig' ] },
+      { answer: 'a. 오리 날다', score : 2},
+      { answer: 'b. 별 보러 갈래', score : 1},
+      { answer: 'c. 관악을 보게 하라', score : 0 },
     ]
   },
   {
-    q: '9. 연인에게 하루종일 연락이 안 온다..',
+    q: '9. @@, 넌 이상형이 어떻게 돼?',
     a: [
-      { answer: 'a. 뭐.. 언젠가 연락 오겠지. 내가 할 일 하며 기다린다', type: ['sheep', 'mouse', 'snake', 9 ] },
-      { answer: 'b. 초조해서 마음 졸이며 인스타, 페북, 카톡 등 모든 SNS 다 들어가본다.', type: [1, 'rabbit', 'horse', 'pig' ] },
-      { answer: 'c. 연인에게 연락 올 때까지 무한 카톡, 무한 전화', type: [2, 'dog', 'monkey', 4 ] },
+      { answer: 'a. 나? 음...비둘기?', score : 0 },
+      { answer: 'b. 나? 난...거위 좋아해.', score : 1},
+      { answer: 'c. 나?... 난 오리 좋아해', score : 2},
     ]
   },
   {
-    q: '10. 연인이 연락도 없이 보고싶다고 우리집 앞에 와서 기다린다. ',
+    q: '10.  분위기도 괜찮고...손을.. 잡을까? ',
     a: [
-      { answer: 'a. 아니 갑자기 오면 어떡해.. 하 나 준비도 안 했는데 왜 와. 짜증나네', type: [4, 9, 'pig'] },
-      { answer: 'b. 아 그래?? 나 할 것들 좀만 마무리하고 나갈게', type: ['mouse', 2, 'horse', 'snake' ] },
-      { answer: 'c. 헐 대박, 어디야?? 당장 나갈게!', type: [1, 'sheep', 'rabbit', 'dog', 'monkey' ] },
-    ]
-  },
-  {
-    q: '11. 내가 추구하는 연애관은? ',
-    a: [
-      { answer: 'a. 각자 할 것 하며, 평안하고 안정적인 연애가 좋다.', type: [1, 4, 9, 'pig' ] },
-      { answer: 'b. 보고싶을 때 보고, 데이트도 많이 하고 꽁냥꽁냥하는 연애가 좋아.', type: ['sheep', 'mouse', 'rabbit', 'horse', 'dog'] },
-      { answer: 'c. 연애는 마음가는대로! 불타오르는 연애가 최고지.', type: [2, 'snake', 'monkey' ] },
-    ]
-  },
-  {
-    q: '12. 연인과 데이트 도중 화를 참을 수 없을만큼 심하게 싸웠다. 어떻게 할 것인가?',
-    a: [
-      { answer: 'a. "아 화나네. 따라오지마 오늘 집 갈 거니까." 라고 말하며 집으로 간다.', type: ['rabbit', 'horse', 4, 9 ] },
-      { answer: 'b. "야! 너 화내지마. 너 잘못이지. 내가 뭘 잘못했는데?" 소리지르며 끝까지 불같이 화낸다.', type: ['mouse', 2, 'snake', 'dog', 'monkey'] },
-      { answer: 'c. "아니 그건 아니고, 하.." 조용히 운다.', type: [1, 'sheep', 'pig'] },
+      { answer: 'a. 잡는다', score : 2},
+      { answer: 'b. 잡지 않는다', score : 0},
     ]
   }
 ]

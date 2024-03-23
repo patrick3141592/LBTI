@@ -1,9 +1,9 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
-const endpoint = 12;
-const select = [];
-const score = [];
+let Lovescore = 0;
+const endpoint = 10;
+select=[];
 
 function calResult(){
     var pointArray = [
@@ -79,6 +79,7 @@ function addAnswer(answerText, qIdx, idx){
         }
         setTimeout(() => {
             select[qIdx] = idx;
+            Lovescore += 5*(qnaList[qIdx]['a'][idx]['score'])
             for(let i=0; i < children.length; i++){
                 children[i].style.display='none';
             }
@@ -99,7 +100,7 @@ function goNext(qIdx){
         addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
     }
     var Love = document.querySelector('.LoveBar');
-    Love.style.width = (100/endpoint)*(qIdx+1) + '%';
+    Love.style.width = (Lovescore) + '%';
 }
 function begin(){
     main.style.Webkitanimation = "fadeOut 1s";
