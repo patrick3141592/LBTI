@@ -5,7 +5,10 @@ const stage1 = document.querySelector("#stage1");
 const stage2 = document.querySelector("#stage2");
 const stage3 = document.querySelector("#stage3");
 
-const img = document.querySelector("img");
+const img1 = document.getElementById("test_id1");
+const img2 = document.getElementById("test_id2");
+const img3 = document.getElementById("test_id3");
+const img4 = document.getElementById("test_id4");
 
 let Lovescore = 50;
 const endpoint = 10;
@@ -13,11 +16,42 @@ select = [];
 stages = [stage1, stage2, stage3];
 
 function check(stageNum) {
-  if (Lovescore < 50 + (stageNum + 1) * 5) {
-    img.src = "./img/거절리오.jpg";
+  if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 0) {
+    img1.src = "./img/거절리오.jpg";
     return;
-  } else {
-    img.src = "./img/좋아리오.jpg";
+  } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 0) {
+    stages[stageNum].style.Webkitanimation = "fadeOut 1s";
+    stages[stageNum].style.animation = "fadeOut 1s";
+    setTimeout(() => {
+      qna.style.Webkitanimation = "fadeIn 1s";
+      qna.style.animation = "fadeIn 1s";
+      setTimeout(() => {
+        stages[stageNum].style.display = "none";
+        qna.style.display = "block";
+      }, 450);
+    });
+    console.log((stageNum + 1) * 3 + 1 / 2);
+    goNext((stageNum + 1) * 3 + 1 / 2);
+  } else if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 1) {
+    img2.src = "./img/수줍리오.jpg";
+    return;
+  } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 1) {
+    stages[stageNum].style.Webkitanimation = "fadeOut 1s";
+    stages[stageNum].style.animation = "fadeOut 1s";
+    setTimeout(() => {
+      qna.style.Webkitanimation = "fadeIn 1s";
+      qna.style.animation = "fadeIn 1s";
+      setTimeout(() => {
+        stages[stageNum].style.display = "none";
+        qna.style.display = "block";
+      }, 450);
+    });
+    console.log((stageNum + 1) * 3 + 1 / 2);
+    goNext((stageNum + 1) * 3 + 1 / 2);
+  } else if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 2) {
+    img3.src = "./img/좋아리오.jpg";
+    return;
+  } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 2) {
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
     setTimeout(() => {
@@ -48,51 +82,10 @@ function goStage(stageNum) {
   check(stageNum);
 }
 
-function calResult() {
-  var pointArray = [
-    { name: "mouse", value: 0, key: 0 },
-    { name: "cow", value: 0, key: 1 },
-    { name: "tiger", value: 0, key: 2 },
-    { name: "rabbit", value: 0, key: 3 },
-    { name: "dragon", value: 0, key: 4 },
-    { name: "snake", value: 0, key: 5 },
-    { name: "horse", value: 0, key: 6 },
-    { name: "sheep", value: 0, key: 7 },
-    { name: "monkey", value: 0, key: 8 },
-    { name: "chick", value: 0, key: 9 },
-    { name: "dog", value: 0, key: 10 },
-    { name: "pig", value: 0, key: 11 },
-  ];
-
-  for (let i = 0; i < endpoint; i++) {
-    var target = qnaList[i].a[select[i]];
-    for (let j = 0; j < target.type.length; j++) {
-      for (let k = 0; k < pointArray.length; k++) {
-        if (target.type[j] === pointArray[k].name) {
-          pointArray[k].value += 1;
-        }
-      }
-    }
-  }
-  var resultArray = pointArray.sort(function (a, b) {
-    if (a.value > b.value) {
-      return -1;
-    }
-    if (a.value < b.value) {
-      return 1;
-    }
-    return 0;
-  });
-  console.log(resultArray);
-  let resultword = resultArray[0].key;
-  return resultword;
+function setResult() {
+  img4.src = "./img/좋아리오.jpg";
+  return;
 }
-
-/*function setResult(){
-    let point = calResult()
-    const resultName
-}
-    */
 
 function goResult() {
   qna.style.Webkitanimation = "fadeOut 1s";
