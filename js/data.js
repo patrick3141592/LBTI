@@ -24,7 +24,7 @@
     ]
   },
   {
-    q: '2. 좋아하는 사람이 생겨 연락하고자 한다 ',
+    q: '2. 필립이형 고마워~~~~~~~',
     a: [
       { answer: 'a. 바로 먼저 연락한다.', type: ['mouse', 'rabbit', 'tiger', 'monkey'] },
       { answer: 'b. 언제 연락할지, 어떻게 말할지 심사숙고하여 연락한다.', type: ['cow', 'horse', 'snake', 'dog'] },
