@@ -2,8 +2,11 @@ const nameForm = document.querySelector(".js-nameForm"),
     nameInput = nameForm.querySelector("input"),
     sayHello = document.querySelector(".js-sayHello");
 
-const SAVE_NAME = "username",
+const SAVE_NAME = "userName",
     SHOWING_CLASS = "showing";
+
+sessonStorage.setItem("username", SAVE_NAME);
+var get_name = sessionStrage.getItem("username");
 
 function saveName(text){
     localStorage.setItem(SAVE_NAME, text);
