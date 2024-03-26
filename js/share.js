@@ -64,3 +64,9 @@ function kakaoShare()
         },
         ],
     });}
+
+function setShare(){
+    const shareTitle = '리연시: 리오 연애 시뮬레이션'
+    const shareDes = '친구의 결과는?'
+    const shareImg = '../img/인사리오.png'
+}
