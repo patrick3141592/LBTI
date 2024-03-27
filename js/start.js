@@ -175,4 +175,8 @@ function begin() {
 
 }
 
+function getLoveScore(){
+  return Lovescore;
+}
+
 //window.beginn = beginn();
