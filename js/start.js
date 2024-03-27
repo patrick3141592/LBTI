@@ -159,7 +159,7 @@ function goNext(qIdx) {
 }
 
 
-export function begin() {
+function begin() {
   main.style.Webkitanimation = "fadeOut 1s";
   main.style.animation = "fadeOut 1s";
   setTimeout(() => {
@@ -174,3 +174,5 @@ export function begin() {
   }, 450);
   saveName();
 }
+
+window.begin = begin();
