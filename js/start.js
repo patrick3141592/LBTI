@@ -170,5 +170,5 @@ function begin() {
     let qIdx = 0;
     goNext(qIdx);
   }, 450);
-  storeName();
+  saveName();
 }
