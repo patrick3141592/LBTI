@@ -15,7 +15,7 @@ function loadName(){
     if (currentUser){
         console.log("hereee");
         //sayHello.innerText = 'Hi, ${currentUser}';
-        sayHello.innerText = "플레이어" + sessionStorage.getItem(SAVE_NAME) + " 님은 ";
+        sayHello.innerText = sessionStorage.getItem(SAVE_NAME);
         console.log(sayHello.innerText)
         sayHello.classList.add(SHOWING_CLASS);
     }
