@@ -11,8 +11,12 @@ function saveName(text){
 
 function loadName(){
     const currentUser = sessionStorage.getItem(SAVE_NAME);
+    console.log("successfully load to currentUser");
     if (currentUser){
-        sayHello.innerText = 'Hi, ${currentUser}';
+        console.log("hereee");
+        //sayHello.innerText = 'Hi, ${currentUser}';
+        sayHello.innerText = sessionStorage.getItem(SAVE_NAME);
+        console.log(sayHello.innerText)
         sayHello.classList.add(SHOWING_CLASS);
     }
 }

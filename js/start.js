@@ -157,6 +157,41 @@ function goNext(qIdx) {
   Love.style.width = Lovescore + "%";
   console.log(qIdx);
 }
+
+
+const nameForm = document.querySelector(".js-nameForm"),
+    nameInput = nameForm.querySelector("input"),
+    sayHello = document.querySelector(".js-sayHello");
+
+const SAVE_NAME = "userName",
+    SHOWING_CLASS = "showing";
+
+function saveName(text){
+    sessionStorage.setItem(SAVE_NAME, text);
+}
+
+function loadName(){
+    const currentUser = sessionStorage.getItem(SAVE_NAME);
+    console.log("successfully load to currentUser");
+    if (currentUser){
+        console.log("hereee");
+        //sayHello.innerText = 'Hi, ${currentUser}';
+        sayHello.innerText = sessionStorage.getItem(SAVE_NAME);
+        console.log(sayHello.innerText)
+        sayHello.classList.add(SHOWING_CLASS);
+    }
+}
+
+nameForm.addEventListener("submit",function(event){
+    event.preventDefault();
+    saveName(nameInput.value);
+    loadName();
+});
+
+loadName();
+
+
+
 function begin() {
   main.style.Webkitanimation = "fadeOut 1s";
   main.style.animation = "fadeOut 1s";
@@ -170,4 +205,5 @@ function begin() {
     let qIdx = 0;
     goNext(qIdx);
   }, 450);
+  saveName();
 }
