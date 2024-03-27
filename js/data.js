@@ -18,9 +18,9 @@ const qnaList = [
   {
     q: "3. 넌 좋아하는 노래 장르가 어떻게 돼?",
     a: [
-      { answer: "a. 힙합.", score: 0 },
-      { answer: "b. 발라드.", score: 1 },
-      { answer: "c. 밴드.", score: 2 },
+      { answer: "a. 힙합", score: 0 },
+      { answer: "b. 발라드", score: 1 },
+      { answer: "c. 밴드", score: 2 },
     ],
   },
   {
