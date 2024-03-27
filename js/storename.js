@@ -7,7 +7,6 @@ const SAVE_NAME = "userName",
 
 function saveName(text){
     sessionStorage.setItem(SAVE_NAME, text);
-    begin();
 }
 
 function loadName(){
