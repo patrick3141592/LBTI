@@ -172,7 +172,7 @@ function beginn() {
     let qIdx = 0;
     goNext(qIdx);
   }, 450);
-  saveName();
+
 }
 
-window.beginn = beginn();
+//window.beginn = beginn();
