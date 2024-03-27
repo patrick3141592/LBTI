@@ -15,6 +15,7 @@ function loadName(){
     if (currentUser){
         console.log("hereee");
         sayHello.innerText = 'Hi, ${currentUser}';
+        console.log(sayHello.innerText)
         sayHello.classList.add(SHOWING_CLASS);
     }
 }
