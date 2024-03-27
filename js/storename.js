@@ -5,8 +5,11 @@ const nameForm = document.querySelector(".js-nameForm"),
 const SAVE_NAME = "userName",
     SHOWING_CLASS = "showing";
 
+import { begin } from './start.js';
+
 function saveName(text){
     sessionStorage.setItem(SAVE_NAME, text);
+    begin();
 }
 
 function loadName(){

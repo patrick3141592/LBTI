@@ -159,7 +159,7 @@ function goNext(qIdx) {
 }
 
 
-function begin() {
+export function begin() {
   main.style.Webkitanimation = "fadeOut 1s";
   main.style.animation = "fadeOut 1s";
   setTimeout(() => {
