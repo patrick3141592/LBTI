@@ -24,11 +24,15 @@
     <link rel="stylesheet" href="css/stage1.css" />
     <link rel="stylesheet" href="css/stage2.css" />
     <link rel="stylesheet" href="css/stage3.css" />
+    <link rel = "stylesheet" href = "css/btn.css"/>
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
     integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH" crossorigin="anonymous"></script>
     <script>Kakao.init('534aac674462c33b4c04cbf4b0e5bc94');
       Kakao.isInitialized();</script>
   </head>
+
+
+
   <body>
     <div class="container pt-5">
       <section id="main" class="mx-auto pb-5 px-4">
@@ -38,9 +42,20 @@
         </div>
 
         <p>
-          리오와 연애를 한다...!!!<br />
+          리오와 연애를 한다...!!!<br/>
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
+        <p></p>
+        <!--
+        <form class = "js-nameForm">
+          <input type = "text" placeholder = "플레이어명을 입력해주세요.">
+        </form>
+      -->
+        <div class = "js-nameForm">
+          <input type="text" placeholder = "플레이어명을 입력해ㅐㅐㅐ">
+          <button> 저장하기 </button>
+        </div>
+
         <button type="button" class="btn btn-danger mt-2" onclick="js:begin()">
           시작하기
         </button>
@@ -49,6 +64,7 @@
         <div class="Love mx-auto mt-5">
           <div class="LoveBar"></div>
         </div>
+ 
         <script>
           document.addEventListener("touchstart", function () {}, true);
         </script>
@@ -61,6 +77,15 @@
           />
         </div>
         <div class="qBox my-5 py-3 mx-auto"></div>
+        
+
+
+
+        <h1 class="js-sayHello" color = "black"></h1>
+
+
+
+
         <div class="answerBox"></div>
       </section>
       <section id="result" class="mx-auto pb-5 px-4">
@@ -78,7 +103,9 @@
           리오와 연애 성공...!!!<br />
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
-        <button type="button" onclick="js:kakaoShare()">공유하기</button>
+        <button type="button" class ="fancybtn sharebutton" onclick="js:kakaoShare()">
+          공유하기
+        </button>
       </section>
 
       <section id="stage1" class="mx-auto pb-5 px-4">
@@ -96,7 +123,9 @@
           리오와 연애 실패...!!!<br />
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
-        <button type="button" onclick="js:kakaoShare()">공유하기</button>
+        <button type="button" class ="fancybtn sharebutton" onclick="js:kakaoShare()">
+          공유하기
+        </button>
       </section>
 
       <section id="stage2" class="mx-auto pb-5 px-4">
@@ -114,7 +143,9 @@
           리오와 연애 실패...!!!<br />
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
-        <button type="button" onclick="js:kakaoShare()">공유하기</button>
+        <button type="button" class ="fancybtn sharebutton" onclick="js:kakaoShare()">
+          공유하기
+        </button>
       </section>
 
       <section id="stage3" class="mx-auto pb-5 px-4">
@@ -132,12 +163,15 @@
           리오와 연애 실패...!!!<br />
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
-        <button type="button" onclick="js:kakaoShare()">공유하기</button>
+        <button type="button" class ="fancybtn sharebutton" onclick="js:kakaoShare()">
+        공유하기
+        </button>
       </section>
 
       <script src="./js/data.js" charset="utf-8"></script>
       <script src="./js/start.js" charset="utf-8"></script>
       <script src="./js/share.js"></script>
+      <script src = "./js/storename.js"></script>
     </div>
   </body>
 </html>
