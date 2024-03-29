@@ -53,3 +53,7 @@
     rgba(240, 47, 23, 1) 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+
+.bi {
+  position: absolute;
+}
