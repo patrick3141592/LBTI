@@ -57,5 +57,6 @@
 
 .bi {
   position: absolute;
-  top: 100%;
+  top: 0;
+  left: 0;
 }
