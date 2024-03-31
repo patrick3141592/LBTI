@@ -42,7 +42,6 @@
 }
 
 .LoveBar {
-  position: relative;
   height: 100%;
   border-radius: 20px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f85032+0,f16f5c+51,f16f5c+51,f02f17+98 */
@@ -56,8 +55,6 @@
 }
 
 .bi {
-  position: absolute;
-  top: 0;
-  left: 0;
   fill: red;
+  position: relative;
 }
