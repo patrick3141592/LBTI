@@ -33,7 +33,7 @@ function check(stageNum) {
     console.log((stageNum + 1) * 3 + 1 / 2);
     goNext((stageNum + 1) * 3 + 1 / 2);
   } else if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 1) {
-    img2.src = "./img/수줍리오.jpg";
+    img2.src = "./img/수줍리오.png";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 1) {
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
@@ -157,6 +157,8 @@ function goNext(qIdx) {
   Love.style.width = Lovescore + "%";
   console.log(qIdx);
 }
+
+
 function begin() {
   main.style.Webkitanimation = "fadeOut 1s";
   main.style.animation = "fadeOut 1s";
@@ -170,4 +172,11 @@ function begin() {
     let qIdx = 0;
     goNext(qIdx);
   }, 450);
+
 }
+
+function getLoveScore(){
+  return Lovescore;
+}
+
+//window.beginn = beginn();

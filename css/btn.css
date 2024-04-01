@@ -1,0 +1,10 @@
+.fancybutton{
+    background-color: pink;
+    border: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.sharebutton {border-radius: 16px}
