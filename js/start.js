@@ -15,11 +15,25 @@ const endpoint = 10;
 select = [];
 stages = [stage1, stage2, stage3];
 
+let currentBackgroundIndex = 0; // Index of the current background image
+
+
 function check(stageNum) {
+  const backgrounds = ['./img/쌍학.jpg', './img/캠공.jpg']; // List of background images
   if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 0) {
     img1.src = "./img/거절리오.jpg";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 0) {
+    document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
+
+    // Increment the background index
+    currentBackgroundIndex++;
+
+    // If the index exceeds the number of backgrounds, reset it to 0
+    if (currentBackgroundIndex === backgrounds.length) {
+      currentBackgroundIndex = 0;
+    }
+    
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
     setTimeout(() => {
@@ -36,6 +50,8 @@ function check(stageNum) {
     img2.src = "./img/수줍리오.png";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 1) {
+    document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
+
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
     setTimeout(() => {
@@ -114,7 +130,7 @@ function addAnswer(answerText, qIdx, idx) {
 
   answer.addEventListener(
     "click",
-    function () {
+    function () { 
       var children = document.querySelectorAll(".answerList");
       for (let i = 0; i < children.length; i++) {
         children[i].disabled = true;
@@ -155,11 +171,13 @@ function goNext(qIdx) {
   }
   var Love = document.querySelector(".LoveBar");
   Love.style.width = Lovescore + "%";
-  console.log(qIdx);
+
 }
 
 
 function begin() {
+  document.body.style.backgroundImage = `url('./img/자하연.jpg')`;
+
   main.style.Webkitanimation = "fadeOut 1s";
   main.style.animation = "fadeOut 1s";
   setTimeout(() => {
@@ -175,8 +193,5 @@ function begin() {
 
 }
 
-function getLoveScore(){
-  return Lovescore;
-}
 
 //window.beginn = beginn();
