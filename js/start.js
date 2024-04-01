@@ -15,6 +15,7 @@ const after8 = document.querySelector("#after8");
 const after9 = document.querySelector("#after9");
 const after10 = document.querySelector("#after10");
 
+const img0 = document.getElementById("test_id0");
 const img1 = document.getElementById("test_id1");
 const img2 = document.getElementById("test_id2");
 const img3 = document.getElementById("test_id3");
@@ -42,7 +43,10 @@ let currentBackgroundIndex = 0; // Index of the current background image
 function goafter(qIdx) {}
 
 function check(stageNum) {
-  const backgrounds = ["https://patrick3141592.github.io/img/%EC%8C%8D%ED%95%99.jpg", "https://patrick3141592.github.io/img/%EC%BA%A0%EA%B3%B5.jpg"]; // List of background images
+  const backgrounds = [
+    "https://patrick3141592.github.io/img/%EC%8C%8D%ED%95%99.jpg",
+    "https://patrick3141592.github.io/img/%EC%BA%A0%EA%B3%B5.jpg",
+  ]; // List of background images
   if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 0) {
     img1.src = "./img/난처리오.png";
     return;
@@ -199,19 +203,35 @@ function goNext(qIdx) {
 
 function begin() {
   document.body.style.backgroundImage = `url('https://patrick3141592.github.io/img/%EC%9E%90%ED%95%98%EC%97%B0.jpg')`;
+  //소개팅 장면이란 걸 언급해주어야 할 것 같아서, main -> qna로 넘어가기 전에 stage0.css로 넘어가려합니당 그리고 4초정도 interval 두고 넘어갈 것 같아요
 
-  main.style.Webkitanimation = "fadeOut 1s";
-  main.style.animation = "fadeOut 1s";
+  main.style.Webkitanimation = "fadeOut 2s";
+  main.style.animation = "fadeOut 2s";
   setTimeout(() => {
-    qna.style.Webkitanimation = "fadeIn 1s";
-    qna.style.animation = "fadeIn 1s";
+    stage0.style.Webkitanimation = "fadeIn 2s";
+    stage0.style.animation = "fadeIn 2s";
     setTimeout(() => {
       main.style.display = "none";
-      qna.style.display = "block";
+      stage0.style.display = "block";
     }, 450);
-    let qIdx = 0;
-    goNext(qIdx);
-  }, 450);
+  });
+  img0.src = "./img/수줍리오.png";
+
+  setTimeout(() => {
+    stage0.style.Webkitanimation = "fadeOut 1s";
+    stage0.style.animation = "fadeOut 1s";
+
+    setTimeout(() => {
+      qna.style.Webkitanimation = "fadeIn 1s";
+      qna.style.animation = "fadeIn 1s";
+      setTimeout(() => {
+        stage0.style.display = "none";
+        qna.style.display = "block";
+      }, 450);
+      let qIdx = 0;
+      goNext(qIdx);
+    }, 450);
+  }, 5000);
 }
 
 //window.beginn = beginn();

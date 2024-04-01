@@ -1,8 +1,8 @@
-#stage1 {
+#stage0 {
   display: none;
 }
 
-#stage1_0 {
+#stage0_0 {
   background-color: whitesmoke;
   width: 100%;
   text-align: center;
