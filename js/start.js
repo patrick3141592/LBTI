@@ -42,7 +42,7 @@ let currentBackgroundIndex = 0; // Index of the current background image
 function goafter(qIdx) {}
 
 function check(stageNum) {
-  const backgrounds = ["./img/쌍학.jpg", "./img/캠공.jpg"]; // List of background images
+  const backgrounds = ["https://patrick3141592.github.io/img/%EC%8C%8D%ED%95%99.jpg", "https://patrick3141592.github.io/img/%EC%BA%A0%EA%B3%B5.jpg"]; // List of background images
   if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 0) {
     img1.src = "./img/난처리오.png";
     return;
@@ -198,7 +198,7 @@ function goNext(qIdx) {
 }
 
 function begin() {
-  document.body.style.backgroundImage = `url('./img/자하연.jpg')`;
+  document.body.style.backgroundImage = `url('https://patrick3141592.github.io/img/%EC%9E%90%ED%95%98%EC%97%B0.jpg')`;
 
   main.style.Webkitanimation = "fadeOut 1s";
   main.style.animation = "fadeOut 1s";

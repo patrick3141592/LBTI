@@ -34,6 +34,8 @@
       Kakao.init("534aac674462c33b4c04cbf4b0e5bc94");
       Kakao.isInitialized();
     </script>
+    <script src="./js/start.js">
+    </script>           
     <style>
       body {
         background-image: url("./img/투명종이.png");
@@ -63,7 +65,11 @@
         </form>
       -->
         <form class="js-nameForm">
-          <input type="text" class="nameinput" placeholder="" />
+          <input
+            type="text"
+            class="nameinput"
+            placeholder="플레이어명을 입력해주세요"
+          />
           <button onclick="js:saveName()">저장</button>
         </form>
 
@@ -73,31 +79,15 @@
       </section>
       <section id="qna">
         <div class="heart">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="70"
-            height="auto"
-            fill="currentColor"
-            class="bi bi-heart"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-            />
-          </svg>
-          <h1 class="main_image_text">70</h1>
-        </div>
-        <div class="qBox my-5 py-3 mx-auto"></div>
-        <script>
-          document.addEventListener("touchstart", function () {}, true);
-        </script>
-
-        <!--
-          <h4 class="js-sayHello" color = "black"></h4>
-          -->
-
-        <div class="answerBox"></div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="auto" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+          </svg>      
+          <!--<script>
+            // Access the variable from the external JavaScript file
+            const backgrounds = Lovescore;
+            console.log(backgrounds); // Output the backgrounds array to console
+          </script>
+          </div><div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <img
             src="./img/웃음리오.png"
             alt="mainImage"
@@ -105,6 +95,16 @@
             style="display: block; margin: 0 auto; width: auto; height: 300px"
           />
         </div>
+        <div class="qBox my-5 py-3 mx-auto"></div>
+        <script>
+          document.addEventListener("touchstart", function () {}, true);
+        </script>-->
+
+          <!--
+          <h4 class="js-sayHello" color = "black"></h4>
+          -->
+
+        <div class="answerBox"></div>
       </section>
       <section id="result" class="mx-auto pb-5 px-4">
         <h2 class="pt-5">리오 연애 시뮬레이션</h2>
@@ -133,19 +133,6 @@
 
       <section id="stage1" class="mx-auto pb-5 px-4">
         <h2 class="pt-5">리오 연애 시뮬레이션</h2>
-        <p>플레이어</p>
-        <h4 class="js-sayHello" color="black"></h4>
-        <p>
-          리오와 연애 실패...!!!<br />
-          리오리오리오!!! 꽦꼬ㅒㄲ
-        </p>
-        <button
-          type="button"
-          class="fancybtn sharebutton"
-          onclick="js:kakaoShare()"
-        >
-          공유하기
-        </button>
         <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <img
             id="test_id1"
@@ -154,10 +141,6 @@
             class="img-fluid"
           />
         </div>
-      </section>
-
-      <section id="stage2" class="mx-auto pb-5 px-4">
-        <h2 class="pt-5">리오 연애 시뮬레이션</h2>
         <p>플레이어</p>
         <h4 class="js-sayHello" color="black"></h4>
         <p>
@@ -171,6 +154,10 @@
         >
           공유하기
         </button>
+      </section>
+
+      <section id="stage2" class="mx-auto pb-5 px-4">
+        <h2 class="pt-5">리오 연애 시뮬레이션</h2>
         <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <img
             id="test_id2"
@@ -179,10 +166,6 @@
             class="img-fluid"
           />
         </div>
-      </section>
-
-      <section id="stage3" class="mx-auto pb-5 px-4">
-        <h2 class="pt-5">리오 연애 시뮬레이션</h2>
         <p>플레이어</p>
         <h4 class="js-sayHello" color="black"></h4>
         <p>
@@ -196,6 +179,10 @@
         >
           공유하기
         </button>
+      </section>
+
+      <section id="stage3" class="mx-auto pb-5 px-4">
+        <h2 class="pt-5">리오 연애 시뮬레이션</h2>
         <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <img
             id="test_id3"
@@ -204,6 +191,19 @@
             class="img-fluid"
           />
         </div>
+        <p>플레이어</p>
+        <h4 class="js-sayHello" color="black"></h4>
+        <p>
+          리오와 연애 실패...!!!<br />
+          리오리오리오!!! 꽦꼬ㅒㄲ
+        </p>
+        <button
+          type="button"
+          class="fancybtn sharebutton"
+          onclick="js:kakaoShare()"
+        >
+          공유하기
+        </button>
       </section>
 
       <script src="./js/data.js" charset="utf-8"></script>
