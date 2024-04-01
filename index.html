@@ -54,8 +54,8 @@
         <h2 class="pt-5">리오 연애 시뮬레이션</h2>
 
         <p>
-          리오와 연애를 한다...!!!<br />
-          리오리오리오!!! 꽦꼬ㅒㄲ
+          플레이어명을 입력하시고 저장을 누른 후,<br />
+          시작하기를 눌러주세요.
         </p>
         <!--
         <form class = "js-nameForm">
@@ -63,11 +63,7 @@
         </form>
       -->
         <form class="js-nameForm">
-          <input
-            type="text"
-            class="nameinput"
-            placeholder="플레이어명을 입력해주세요"
-          />
+          <input type="text" class="nameinput" placeholder="" />
           <button onclick="js:saveName()">저장</button>
         </form>
 
@@ -83,21 +79,22 @@
         <script>
           document.addEventListener("touchstart", function () {}, true);
         </script>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
-          <img
-            src="./img/평범한리오.png"
-            alt="mainImage"
-            class="img-fluid"
-            style="display: block; margin: 0 auto; width: 225px; height: 400px"
-          />
-        </div>
-        <div class="qBox my-5 py-3 mx-auto"></div>
+        <div class="qBox my-5 py-3 mx-auto pb-10"></div>
 
         <!--
           <h4 class="js-sayHello" color = "black"></h4>
           -->
 
         <div class="answerBox"></div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
+          <img
+            src="./img/웃음리오.png"
+            alt="mainImage"
+            class="img-fluid"
+            style="display: block; margin: 0 auto; width: 270px; height: 270px"
+          />
+        </div>
       </section>
       <section id="result" class="mx-auto pb-5 px-4">
         <h2 class="pt-5">리오 연애 시뮬레이션</h2>
@@ -125,8 +122,24 @@
       </section>
 
       <section id="stage1" class="mx-auto pb-5 px-4">
-        <h2 class="pt-5">리오 연애 시뮬레이션</h2>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
+        <h2 class="pt-5" style="display: block; margin: 0 auto">
+          리오 연애 시뮬레이션
+        </h2>
+
+        <div class="qBox my-5 py-3 mx-auto pb-10">
+          <p>미안.. 나 이제 가봐야 해서...</p>
+        </div>
+        <h4 class="js-sayHello" color="black"></h4>
+
+        <button
+          type="button"
+          class="fancybtn sharebutton"
+          style="display: block; margin: 0 auto"
+          onclick="js:kakaoShare()"
+        >
+          공유하기
+        </button>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 pt-10 mx-auto">
           <img
             id="test_id1"
             src="./img/경멸 리오.png"
@@ -134,19 +147,6 @@
             class="img-fluid"
           />
         </div>
-        <p>플레이어</p>
-        <h4 class="js-sayHello" color="black"></h4>
-        <p>
-          리오와 연애 실패...!!!<br />
-          리오리오리오!!! 꽦꼬ㅒㄲ
-        </p>
-        <button
-          type="button"
-          class="fancybtn sharebutton"
-          onclick="js:kakaoShare()"
-        >
-          공유하기
-        </button>
       </section>
 
       <section id="stage2" class="mx-auto pb-5 px-4">

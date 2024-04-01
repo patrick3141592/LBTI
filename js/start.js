@@ -4,6 +4,16 @@ const result = document.querySelector("#result");
 const stage1 = document.querySelector("#stage1");
 const stage2 = document.querySelector("#stage2");
 const stage3 = document.querySelector("#stage3");
+const after1 = document.querySelector("#after1");
+const after2 = document.querySelector("#after2");
+const after3 = document.querySelector("#after3");
+const after4 = document.querySelector("#after4");
+const after5 = document.querySelector("#after5");
+const after6 = document.querySelector("#after6");
+const after7 = document.querySelector("#after7");
+const after8 = document.querySelector("#after8");
+const after9 = document.querySelector("#after9");
+const after10 = document.querySelector("#after10");
 
 const img1 = document.getElementById("test_id1");
 const img2 = document.getElementById("test_id2");
@@ -14,14 +24,27 @@ let Lovescore = 50;
 const endpoint = 10;
 select = [];
 stages = [stage1, stage2, stage3];
+afters = [
+  after1,
+  after2,
+  after3,
+  after4,
+  after5,
+  after6,
+  after7,
+  after8,
+  after9,
+  after10,
+];
 
 let currentBackgroundIndex = 0; // Index of the current background image
 
+function goafter(qIdx) {}
 
 function check(stageNum) {
-  const backgrounds = ['./img/쌍학.jpg', './img/캠공.jpg']; // List of background images
+  const backgrounds = ["./img/쌍학.jpg", "./img/캠공.jpg"]; // List of background images
   if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 0) {
-    img1.src = "./img/거절리오.jpg";
+    img1.src = "./img/난처리오.png";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 0) {
     document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
@@ -33,7 +56,7 @@ function check(stageNum) {
     if (currentBackgroundIndex === backgrounds.length) {
       currentBackgroundIndex = 0;
     }
-    
+
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
     setTimeout(() => {
@@ -130,7 +153,7 @@ function addAnswer(answerText, qIdx, idx) {
 
   answer.addEventListener(
     "click",
-    function () { 
+    function () {
       var children = document.querySelectorAll(".answerList");
       for (let i = 0; i < children.length; i++) {
         children[i].disabled = true;
@@ -140,6 +163,7 @@ function addAnswer(answerText, qIdx, idx) {
       setTimeout(() => {
         select[qIdx] = idx;
         Lovescore += 5 * (qnaList[qIdx]["a"][idx]["score"] - 1);
+        console.log(afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]]);
         for (let i = 0; i < children.length; i++) {
           children[i].style.display = "none";
         }
@@ -171,9 +195,8 @@ function goNext(qIdx) {
   }
   var Love = document.querySelector(".LoveBar");
   Love.style.width = Lovescore + "%";
-
+  goafter(qIdx);
 }
-
 
 function begin() {
   document.body.style.backgroundImage = `url('./img/자하연.jpg')`;
@@ -190,8 +213,6 @@ function begin() {
     let qIdx = 0;
     goNext(qIdx);
   }, 450);
-
 }
-
 
 //window.beginn = beginn();
