@@ -24,14 +24,19 @@
     <link rel="stylesheet" href="css/stage1.css" />
     <link rel="stylesheet" href="css/stage2.css" />
     <link rel="stylesheet" href="css/stage3.css" />
-    <link rel = "stylesheet" href = "css/btn.css"/>
-    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
-    integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH" crossorigin="anonymous"></script>
-    <script>Kakao.init('534aac674462c33b4c04cbf4b0e5bc94');
-      Kakao.isInitialized();</script>
+    <link rel="stylesheet" href="css/btn.css" />
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
+      integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Kakao.init("534aac674462c33b4c04cbf4b0e5bc94");
+      Kakao.isInitialized();
+    </script>
     <style>
       body {
-        background-image: url('./img/투명종이.png');
+        background-image: url("./img/투명종이.png");
         background-size: cover;
         height: 100vh;
         margin: 0;
@@ -43,18 +48,13 @@
     </style>
   </head>
 
-
-
   <body>
     <div class="container pt-5">
       <section id="main" class="mx-auto pb-5 px-4">
         <h2 class="pt-5">리오 연애 시뮬레이션</h2>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
-          <img src="./img/경멸 리오.png" alt="mainImage" class="img-fluid" />
-        </div>
 
         <p>
-          리오와 연애를 한다...!!!<br/>
+          리오와 연애를 한다...!!!<br />
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
         <!--
@@ -62,9 +62,13 @@
           <input type = "text" placeholder = "플레이어명을 입력해주세요.">
         </form>
       -->
-        <form class = "js-nameForm">
-          <input type="text" class = "nameinput" placeholder = "플레이어명을 입력해주세요">
-          <button onclick ="js:saveName()"> 저장 </button>
+        <form class="js-nameForm">
+          <input
+            type="text"
+            class="nameinput"
+            placeholder="플레이어명을 입력해주세요"
+          />
+          <button onclick="js:saveName()">저장</button>
         </form>
 
         <button type="button" class="btn btn-danger mt-5" onclick="js:begin()">
@@ -94,9 +98,7 @@
           <h4 class="js-sayHello" color = "black"></h4>
           -->
 
-
-
-          <div class="answerBox"></div>
+        <div class="answerBox"></div>
       </section>
       <section id="result" class="mx-auto pb-5 px-4">
         <h2 class="pt-5">리오 연애 시뮬레이션</h2>
@@ -108,15 +110,17 @@
             class="img-fluid"
           />
         </div>
-        <p>
-          플레이어
-        </p>
-        <h4 class="js-sayHello" color = "black"></h4>
+        <p>플레이어</p>
+        <h4 class="js-sayHello" color="black"></h4>
         <p>
           리오와 연애 성공...!!!<br />
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
-        <button type="button" class ="fancybtn sharebutton" onclick="js:kakaoShare()">
+        <button
+          type="button"
+          class="fancybtn sharebutton"
+          onclick="js:kakaoShare()"
+        >
           공유하기
         </button>
       </section>
@@ -131,15 +135,17 @@
             class="img-fluid"
           />
         </div>
-        <p>
-          플레이어
-        </p>
-        <h4 class="js-sayHello" color = "black"></h4>
+        <p>플레이어</p>
+        <h4 class="js-sayHello" color="black"></h4>
         <p>
           리오와 연애 실패...!!!<br />
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
-        <button type="button" class ="fancybtn sharebutton" onclick="js:kakaoShare()">
+        <button
+          type="button"
+          class="fancybtn sharebutton"
+          onclick="js:kakaoShare()"
+        >
           공유하기
         </button>
       </section>
@@ -154,15 +160,17 @@
             class="img-fluid"
           />
         </div>
-        <p>
-          플레이어
-        </p>
-        <h4 class="js-sayHello" color = "black"></h4>
+        <p>플레이어</p>
+        <h4 class="js-sayHello" color="black"></h4>
         <p>
           리오와 연애 실패...!!!<br />
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
-        <button type="button" class ="fancybtn sharebutton" onclick="js:kakaoShare()">
+        <button
+          type="button"
+          class="fancybtn sharebutton"
+          onclick="js:kakaoShare()"
+        >
           공유하기
         </button>
       </section>
@@ -177,23 +185,25 @@
             class="img-fluid"
           />
         </div>
-        <p>
-          플레이어
-        </p>
-        <h4 class="js-sayHello" color = "black"></h4>
+        <p>플레이어</p>
+        <h4 class="js-sayHello" color="black"></h4>
         <p>
           리오와 연애 실패...!!!<br />
           리오리오리오!!! 꽦꼬ㅒㄲ
         </p>
-        <button type="button" class ="fancybtn sharebutton" onclick="js:kakaoShare()">
-        공유하기
+        <button
+          type="button"
+          class="fancybtn sharebutton"
+          onclick="js:kakaoShare()"
+        >
+          공유하기
         </button>
       </section>
 
       <script src="./js/data.js" charset="utf-8"></script>
       <script src="./js/start.js" charset="utf-8"></script>
       <script src="./js/share.js"></script>
-      <script src = "./js/storename.js"></script>
+      <script src="./js/storename.js"></script>
     </div>
   </body>
 </html>
