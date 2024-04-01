@@ -194,7 +194,6 @@ function goNext(qIdx) {
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
   }
   var Love = document.querySelector(".LoveBar");
-  Love.style.width = Lovescore + "%";
   goafter(qIdx);
 }
 
