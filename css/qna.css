@@ -34,15 +34,16 @@
   opacity: 1;
 }
 
-.Love {
-  height: 20px;
-  width: 80%;
-  background-color: white;
-  border-radius: 20px;
+.main_image_text{
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate( -50%, -50% );
 }
 
 .bi{
   stroke: pink;
+  position: relative;
 }
 
 .heart {
