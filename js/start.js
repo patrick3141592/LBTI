@@ -49,7 +49,7 @@ function check(stageNum) {
     "https://patrick3141592.github.io/img/%EC%BA%A0%EA%B3%B5.jpg",
   ]; // List of background images
   if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 0) {
-    img1.src = "./img/난처리오.png";
+    img1.src = "./img/경멸리오.png";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 0) {
     document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
@@ -70,12 +70,12 @@ function check(stageNum) {
       setTimeout(() => {
         stages[stageNum].style.display = "none";
         qna.style.display = "block";
-      }, 450);
+      }, 950);
     });
     console.log((stageNum + 1) * 3 + 1 / 2);
     goNext((stageNum + 1) * 3 + 1 / 2);
   } else if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 1) {
-    img2.src = "./img/수줍리오.png";
+    img2.src = "./img/배고파리오.png";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 1) {
     document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
@@ -93,7 +93,7 @@ function check(stageNum) {
     console.log((stageNum + 1) * 3 + 1 / 2);
     goNext((stageNum + 1) * 3 + 1 / 2);
   } else if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 2) {
-    img3.src = "./img/좋아리오.jpg";
+    img3.src = "./img/난처리오.png";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 2) {
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
@@ -199,7 +199,7 @@ function goNext(qIdx) {
     qIdx = qIdx - 1 / 2;
   }
 
-  var score = document.querySelector('.ls');
+  var score = document.querySelector(".ls");
   score.innerHTML = Lovescore;
 
   var q = document.querySelector(".qBox");
