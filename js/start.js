@@ -192,6 +192,10 @@ function goNext(qIdx) {
   } else if (2 * qIdx === 19) {
     qIdx = qIdx - 1 / 2;
   }
+
+  var score = document.querySelector('.ls');
+  score.innerHTML = Lovescore;
+
   var q = document.querySelector(".qBox");
   q.innerHTML = qnaList[qIdx].q;
   for (let i in qnaList[qIdx].a) {

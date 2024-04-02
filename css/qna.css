@@ -41,13 +41,19 @@
   transform: translate( -50%, -50% );
 }
 
+.heart {
+  position: absolute;
+  top: 7%;
+  left: 8%;
+}
+
 .bi{
   stroke: pink;
   position: relative;
 }
 
-.heart {
+.ls {
   position: absolute;
-  top: 7%;
-  left: 8%;
+  top: 8%;
+  left: 23%;
 }

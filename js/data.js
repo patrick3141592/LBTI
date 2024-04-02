@@ -20,7 +20,7 @@ const qnaList = [
     a: [
       { answer: "a. 힙합", score: 0 },
       { answer: "b. 발라드", score: 1 },
-      { answer: "c. 밴드", score: 2 },
+      { answer: "c. 락", score: 2 },
     ],
   },
   {
