@@ -20,6 +20,7 @@ const img1 = document.getElementById("test_id1");
 const img2 = document.getElementById("test_id2");
 const img3 = document.getElementById("test_id3");
 const img4 = document.getElementById("test_id4");
+const img5 = document.getElementById("test_id5");
 
 let Lovescore = 50;
 const endpoint = 10;
@@ -37,7 +38,7 @@ afters = [
   after9,
   after10,
 ];
-
+imgList = ["./img/당황리오.png", "./img/웃음리오.png", "./img/수줍리오.png"];
 let currentBackgroundIndex = 0; // Index of the current background image
 
 function goafter(qIdx) {}
@@ -171,8 +172,13 @@ function addAnswer(answerText, qIdx, idx) {
         for (let i = 0; i < children.length; i++) {
           children[i].style.display = "none";
         }
-        goNext(++qIdx);
       }, 450);
+      var q = document.querySelector(".qBox");
+      q.innerHTML = afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]];
+      img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
+      setTimeout(() => {
+        goNext(++qIdx);
+      }, 3000);
     },
     false
   );

@@ -51,10 +51,9 @@
 
   <body>
     <div class="container pt-1">
+        </div>
       <section id="main" class="mx-auto pb-5 px-4">
-        <h2 class="pt-5">리오 연애 시뮬레이션</h2>
-
-        <p>
+        <p class="pt-5">
           플레이어 이름을 적고 저장을 누른 후<br />
           시작하기를 눌러주세요.
         </p>
@@ -67,7 +66,7 @@
           <input
             type="text"
             class="nameinput"
-            placeholder="플레이어명을 입력해주세요"
+            placeholder="이름 입력"
           />
           <button onclick="js:saveName()">저장</button>
         </form>
@@ -76,6 +75,7 @@
           시작하기
         </button>
       </section>
+
       <section id="qna">
         <div class="heart">
           <svg xmlns="http://www.w3.org/2000/svg" width="70" height="auto" fill="pink" class="bi bi-heart-fill" viewBox="0 0 16 16">
@@ -91,6 +91,7 @@
         <div class="answerBox"></div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <img
+            id="test_id5"
             src="./img/웃음리오.png"
             alt="mainImage"
             class="img-fluid"
