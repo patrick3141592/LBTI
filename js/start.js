@@ -66,8 +66,8 @@ function check(stageNum) {
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
     setTimeout(() => {
-      qna.style.Webkitanimation = "fadeIn 1s";
-      qna.style.animation = "fadeIn 1s";
+      qna.style.Webkitanimation = "fadeIn 0.01s";
+      qna.style.animation = "fadeIn 0.01s";
       setTimeout(() => {
         stages[stageNum].style.display = "none";
         qna.style.display = "block";
@@ -84,8 +84,8 @@ function check(stageNum) {
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
     setTimeout(() => {
-      qna.style.Webkitanimation = "fadeIn 1s";
-      qna.style.animation = "fadeIn 1s";
+      qna.style.Webkitanimation = "fadeIn 0.01s";
+      qna.style.animation = "fadeIn 0.01s";
       setTimeout(() => {
         stages[stageNum].style.display = "none";
         qna.style.display = "block";
@@ -100,8 +100,8 @@ function check(stageNum) {
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
     setTimeout(() => {
-      qna.style.Webkitanimation = "fadeIn 1s";
-      qna.style.animation = "fadeIn 1s";
+      qna.style.Webkitanimation = "fadeIn 0.01s";
+      qna.style.animation = "fadeIn 0.01s";
       setTimeout(() => {
         stages[stageNum].style.display = "none";
         qna.style.display = "block";
