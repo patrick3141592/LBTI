@@ -126,11 +126,11 @@ function check(stageNum) {
 
 function goStage(stageNum) {
   const stage = stages[stageNum];
-  qna.style.Webkitanimation = "fadeOut 1s";
-  qna.style.animation = "fadeOut 1s";
+  qna.style.Webkitanimation = "fadeOut 0.5s";
+  qna.style.animation = "fadeOut 0.5s";
   setTimeout(() => {
-    stage.style.Webkitanimation = "fadeIn 1s";
-    stage.style.animation = "fadeIn 1s";
+    stage.style.Webkitanimation = "fadeIn 0.5s";
+    stage.style.animation = "fadeIn 0.5s";
     setTimeout(() => {
       qna.style.display = "none";
       stage.style.display = "block";
@@ -179,7 +179,6 @@ function addAnswer(answerText, qIdx, idx) {
       }
       setTimeout(() => {
         select[qIdx] = idx;
-        Lovescore += 5 * (qnaList[qIdx]["a"][idx]["score"] - 1);
         console.log(afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]]);
         for (let i = 0; i < children.length; i++) {
           children[i].style.display = "none";
@@ -190,6 +189,9 @@ function addAnswer(answerText, qIdx, idx) {
         goNext(10);
         return;
       }
+      Lovescore += 5 * (qnaList[qIdx]["a"][idx]["score"] - 1);
+      var Love = document.querySelector(".LoveBar");
+      Love.style.width = Lovescore + "%";
       q.innerHTML = afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]];
       img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
       setTimeout(() => {
