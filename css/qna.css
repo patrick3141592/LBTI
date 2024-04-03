@@ -3,10 +3,10 @@
 }
 
 .qBox {
-  background-color: whitesmoke;
+  background-color: rgb(255, 250, 152);
   text-align: center;
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 15;
   width: 80%;
 }
 
@@ -34,11 +34,11 @@
   opacity: 1;
 }
 
-.main_image_text{
+.main_image_text {
   position: absolute;
   top: 46%;
   left: 50%;
-  transform: translate( -50%, -50% );
+  transform: translate(-50%, -50%);
 }
 
 .heart {
@@ -47,7 +47,7 @@
   left: 8%;
 }
 
-.bi{
+.bi {
   stroke: pink;
   position: relative;
 }
