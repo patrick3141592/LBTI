@@ -17,6 +17,7 @@
   display: block;
   width: 80%;
   border: 0px;
+  opacity: 0.85;
 }
 
 .answerList:hover,
