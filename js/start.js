@@ -127,7 +127,8 @@ function goStage(stageNum) {
 }
 
 function setResult() {
-  img4.src = "./img/좋아리오.jpg";
+  var prt = document.querySelector('.name')
+  prt.innerHTML = name;
   return;
 }
 
@@ -241,6 +242,10 @@ function begin() {
       goNext(qIdx);
     }, 450);
   }, 5000);
+}
+
+function saveName(){
+  name = document.getElementById('nameinput').value;  
 }
 
 //window.beginn = beginn();
