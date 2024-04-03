@@ -174,8 +174,8 @@ function addAnswer(answerText, qIdx, idx) {
       var children = document.querySelectorAll(".answerList");
       for (let i = 0; i < children.length; i++) {
         children[i].disabled = true;
-        children[i].style.WebkitAnimation = "fadeOut 0.5s";
-        children[i].style.animation = "fadeOut 0.5s";
+        children[i].style.WebkitAnimation = " fadeOutAndStayTransparent 3s";
+        children[i].style.animation = " fadeOutAndStayTransparent 3s";
       }
       setTimeout(() => {
         select[qIdx] = idx;
@@ -184,7 +184,7 @@ function addAnswer(answerText, qIdx, idx) {
         for (let i = 0; i < children.length; i++) {
           children[i].style.display = "none";
         }
-      }, 450);
+      }, 2999);
       var q = document.querySelector(".qBox");
       if (qIdx === 9) {
         goNext(10);

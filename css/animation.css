@@ -43,3 +43,15 @@
   animation: fadeOut;
   animation-duration: 0.5s;
 }
+
+@keyframes fadeOutAndStayTransparent {
+  0% {
+    opacity: 1;
+  }
+  16% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
