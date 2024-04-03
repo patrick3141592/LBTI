@@ -39,6 +39,7 @@ afters = [
   after9,
   after10,
 ];
+
 imgList = ["./img/당황리오.png", "./img/웃음리오.png", "./img/수줍리오.png"];
 let currentBackgroundIndex = 0; // Index of the current background image
 
@@ -51,7 +52,7 @@ function check(stageNum) {
     "https://patrick3141592.github.io/img/%ED%8F%90%EB%A7%89%EC%A0%9C%EB%A6%AC%EC%98%A4.png",
   ]; // List of background images
   if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 0) {
-    img1.src = "./img/경멸리오.png";
+    img1.src = "./img/리오안읽씹.jpg";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 0) {
     document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
@@ -77,7 +78,7 @@ function check(stageNum) {
     console.log((stageNum + 1) * 3 + 1 / 2);
     goNext((stageNum + 1) * 3 + 1 / 2);
   } else if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 1) {
-    img2.src = "./img/배고파리오.png";
+    img2.src = "./img/경멸리오.png";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 1) {
     document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
@@ -227,7 +228,6 @@ function begin() {
       stage0.style.display = "block";
     }, 450);
   });
-  img0.src = "./img/수줍리오.png";
 
   setTimeout(() => {
     stage0.style.Webkitanimation = "fadeOut 1s";
