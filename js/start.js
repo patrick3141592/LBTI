@@ -244,9 +244,8 @@ function begin() {
 }
 
 function saveName(){
-  var name = document.getElementById('nameinput').value;  
+  var save = document.getElementById('nameinput').value;  
   var prt = document.getElementById('name');
-  prt.innerHTML = name;
 }
 
 //window.beginn = beginn();
