@@ -48,6 +48,7 @@ function check(stageNum) {
   const backgrounds = [
     "https://patrick3141592.github.io/img/%EC%8C%8D%ED%95%99.jpg",
     "https://patrick3141592.github.io/img/%EC%BA%A0%EA%B3%B5.jpg",
+    "https://patrick3141592.github.io/img/%ED%8F%90%EB%A7%89%EC%A0%9C%EB%A6%AC%EC%98%A4.png",
   ]; // List of background images
   if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 0) {
     img1.src = "./img/경멸리오.png";
@@ -79,7 +80,7 @@ function check(stageNum) {
     img2.src = "./img/배고파리오.png";
     return;
   } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 1) {
-    document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
+    document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
 
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
@@ -108,6 +109,8 @@ function check(stageNum) {
       }, 450);
     });
     console.log((stageNum + 1) * 3 + 1 / 2);
+    document.body.style.backgroundImage = `url('${backgrounds[2]}')`;
+    img5.src = "./img/투명종이.png";
     goNext((stageNum + 1) * 3 + 1 / 2);
   }
 }
