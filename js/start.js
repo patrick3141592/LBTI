@@ -227,18 +227,18 @@ function goNext(qIdx) {
 }
 
 function begin() {
-  document.body.style.backgroundImage = `url('https://patrick3141592.github.io/img/%EC%9E%90%ED%95%98%EC%97%B0.jpg')`;
   //소개팅 장면이란 걸 언급해주어야 할 것 같아서, main -> qna로 넘어가기 전에 stage0.css로 넘어가려합니당 그리고 5초정도 interval 두고 넘어갈 것 같아요
-
   main.style.Webkitanimation = "fadeOut 2s";
   main.style.animation = "fadeOut 2s";
   setTimeout(() => {
     stage0.style.Webkitanimation = "fadeIn 2s";
     stage0.style.animation = "fadeIn 2s";
+
     setTimeout(() => {
-      main.style.display = "none";
+      document.body.style.backgroundImage = `url('https://patrick3141592.github.io/img/%EC%9E%90%ED%95%98%EC%97%B0.jpg')`;
       stage0.style.display = "block";
-    }, 450);
+      main.style.display = "none";
+    }, 1500);
   });
 
   setTimeout(() => {
