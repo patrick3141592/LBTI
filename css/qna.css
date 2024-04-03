@@ -48,6 +48,28 @@
   left: 8%;
 }
 
+.Love {
+  height: 20px;
+  width: 80%;
+  top: 70px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.LoveBar {
+  height: 100%;
+  border-radius: 20px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f85032+0,f16f5c+51,f16f5c+51,f02f17+98 */
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 80, 50, 1) 0%,
+    rgba(241, 111, 92, 1) 51%,
+    rgba(241, 111, 92, 1) 51%,
+    rgba(240, 47, 23, 1) 98%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 .bi {
   stroke: pink;
   position: relative;
