@@ -231,31 +231,47 @@ function begin() {
   main.style.Webkitanimation = "fadeOut 2s";
   main.style.animation = "fadeOut 2s";
   setTimeout(() => {
-    stage0.style.Webkitanimation = "fadeIn 2s";
-    stage0.style.animation = "fadeIn 2s";
+    stage6.style.Webkitanimation = "fadeIn 2s";
+    stage6.style.animation = "fadeIn 2s";
 
     setTimeout(() => {
       document.body.style.backgroundImage = `url('https://patrick3141592.github.io/img/%EC%9E%90%ED%95%98%EC%97%B0.jpg')`;
-      stage0.style.display = "block";
-      main.style.display = "none";
+      stage6.style.display = "block";
+      setTimeout(() => {
+        main.style.display = "none";
+      }, 100);
     }, 1500);
   });
-
   setTimeout(() => {
-    stage0.style.Webkitanimation = "fadeOut 1s";
-    stage0.style.animation = "fadeOut 1s";
+    stage6.style.Webkitanimation = "fadeOut 2s";
+    stage6.style.animation = "fadeOut 2s";
+    setTimeout(() => {
+      stage0.style.Webkitanimation = "fadeIn 2s";
+      stage0.style.animation = "fadeIn 2s";
+
+      setTimeout(() => {
+        document.body.style.backgroundImage = `url('https://patrick3141592.github.io/img/%EC%9E%90%ED%95%98%EC%97%B0.jpg')`;
+        stage0.style.display = "block";
+        stage6.style.display = "none";
+      }, 1500);
+    });
 
     setTimeout(() => {
-      qna.style.Webkitanimation = "fadeIn 1s";
-      qna.style.animation = "fadeIn 1s";
+      stage0.style.Webkitanimation = "fadeOut 1s";
+      stage0.style.animation = "fadeOut 1s";
+
       setTimeout(() => {
-        stage0.style.display = "none";
-        qna.style.display = "block";
+        qna.style.Webkitanimation = "fadeIn 1s";
+        qna.style.animation = "fadeIn 1s";
+        setTimeout(() => {
+          stage0.style.display = "none";
+          qna.style.display = "block";
+        }, 450);
+        let qIdx = 0;
+        goNext(qIdx);
       }, 450);
-      let qIdx = 0;
-      goNext(qIdx);
-    }, 450);
-  }, 5000);
+    }, 7000);
+  }, 7000);
 }
 
 function saveName() {
