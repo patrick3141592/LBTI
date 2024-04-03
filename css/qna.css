@@ -3,11 +3,12 @@
 }
 
 .qBox {
-  background-color: rgb(255, 250, 152);
+  background-color: #ffb1cb;
   text-align: center;
   border-radius: 20px;
   font-size: 15;
   width: 80%;
+  opacity: 0.85;
 }
 
 .answerList {

@@ -71,7 +71,7 @@ function check(stageNum) {
       setTimeout(() => {
         stages[stageNum].style.display = "none";
         qna.style.display = "block";
-      }, 950);
+      }, 450);
     });
     console.log((stageNum + 1) * 3 + 1 / 2);
     goNext((stageNum + 1) * 3 + 1 / 2);
@@ -243,9 +243,9 @@ function begin() {
   }, 5000);
 }
 
-function saveName(){
-  var save = document.getElementById('nameinput').value;  
-  var prt = document.getElementById('name');
+function saveName() {
+  var save = document.getElementById("nameinput").value;
+  var prt = document.getElementById("name");
 }
 
 //window.beginn = beginn();
