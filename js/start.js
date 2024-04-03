@@ -203,13 +203,15 @@ function goNext(qIdx) {
     qIdx = qIdx - 1 / 2;
   }
 
+  var score = document.querySelector(".ls");
+  score.innerHTML = Lovescore;
+
   var q = document.querySelector(".qBox");
   q.innerHTML = qnaList[qIdx].q;
   for (let i in qnaList[qIdx].a) {
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
   }
-  var Love = document.querySelector(".LoveBar");
-  Love.style.width = Lovescore + "%";
+  goafter(qIdx);
 }
 
 function begin() {
