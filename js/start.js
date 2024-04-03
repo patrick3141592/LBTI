@@ -24,6 +24,7 @@ const img5 = document.getElementById("test_id5");
 
 let Lovescore = 50;
 const endpoint = 10;
+
 select = [];
 stages = [stage1, stage2, stage3];
 afters = [
@@ -127,8 +128,6 @@ function goStage(stageNum) {
 }
 
 function setResult() {
-  var prt = document.querySelector('.name')
-  prt.innerHTML = name;
   return;
 }
 
@@ -245,7 +244,9 @@ function begin() {
 }
 
 function saveName(){
-  name = document.getElementById('nameinput').value;  
+  var name = document.getElementById('nameinput').value;  
+  var prt = document.getElementById('name');
+  prt.innerHTML = name;
 }
 
 //window.beginn = beginn();
