@@ -207,7 +207,6 @@ function goNext(qIdx) {
   for (let i in qnaList[qIdx].a) {
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
   }
-  var Love = document.querySelector(".LoveBar");
   goafter(qIdx);
 }
 

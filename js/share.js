@@ -1,5 +1,9 @@
 const shareURL = 'https://patrick3141592.github.io/'
 
+function saveName(){
+  var player = document.querySelector('.name');
+}
+
 function kakaoShare()
     {   const shareTitle = '리연시: 리오 연애 시뮬레이션';
         const shareDes = '나는 리오와 연애할 수 있을까?';
