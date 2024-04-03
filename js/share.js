@@ -1,7 +1,9 @@
 const shareURL = 'https://patrick3141592.github.io/'
 
 function saveName(){
-  var player = document.querySelector('.name');
+  const name = document.getElementById('nameinput').value;  
+  console.log(name)
+  document.getElementById("name").innerText = name;
 }
 
 function kakaoShare()
