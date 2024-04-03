@@ -53,10 +53,10 @@ function check(stageNum) {
     "https://patrick3141592.github.io/img/%EC%BA%A0%EA%B3%B5.jpg",
     "https://patrick3141592.github.io/img/%ED%8F%90%EB%A7%89%EC%A0%9C%EB%A6%AC%EC%98%A4.png",
   ]; // List of background images
-  if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 0) {
-    img1.src = "./img/리오안읽씹.jpg";
+  if (Lovescore < 50 && stageNum === 0) {
+    img1.src = "./img/경멸리오.png";
     return;
-  } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 0) {
+  } else if (Lovescore >= 50 && stageNum === 0) {
     document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
 
     // Increment the background index
@@ -79,10 +79,10 @@ function check(stageNum) {
     });
     console.log((stageNum + 1) * 3 + 1 / 2);
     goNext((stageNum + 1) * 3 + 1 / 2);
-  } else if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 1) {
-    img2.src = "./img/경멸리오.png";
+  } else if (Lovescore < 65 && stageNum === 1) {
+    img2.src = "./img/리오안읽씹.jpg";
     return;
-  } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 1) {
+  } else if (Lovescore >= 65 && stageNum === 1) {
     document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
 
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
@@ -97,10 +97,10 @@ function check(stageNum) {
     });
     console.log((stageNum + 1) * 3 + 1 / 2);
     goNext((stageNum + 1) * 3 + 1 / 2);
-  } else if (Lovescore < 50 + (stageNum + 1) * 5 && stageNum === 2) {
+  } else if (Lovescore < 70 && stageNum === 2) {
     img3.src = "./img/난처리오.png";
     return;
-  } else if (Lovescore >= 50 + (stageNum + 1) * 5 && stageNum === 2) {
+  } else if (Lovescore >= 70 && stageNum === 2) {
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
     setTimeout(() => {
