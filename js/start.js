@@ -42,6 +42,8 @@ afters = [
 imgList = ["./img/당황리오.png", "./img/웃음리오.png", "./img/수줍리오.png"];
 let currentBackgroundIndex = 0; // Index of the current background image
 
+function goafter(qIdx) {}
+
 function check(stageNum) {
   const backgrounds = [
     "https://patrick3141592.github.io/img/%EC%8C%8D%ED%95%99.jpg",
@@ -200,13 +202,15 @@ function goNext(qIdx) {
     qIdx = qIdx - 1 / 2;
   }
 
+  var score = document.querySelector(".ls");
+  score.innerHTML = Lovescore;
+
   var q = document.querySelector(".qBox");
   q.innerHTML = qnaList[qIdx].q;
   for (let i in qnaList[qIdx].a) {
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
   }
-  var Love = document.querySelector(".LoveBar");
-  Love.style.width = Lovescore + "%";
+  goafter(qIdx);
 }
 
 function begin() {
