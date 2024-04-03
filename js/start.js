@@ -4,6 +4,7 @@ const result = document.querySelector("#result");
 const stage1 = document.querySelector("#stage1");
 const stage2 = document.querySelector("#stage2");
 const stage3 = document.querySelector("#stage3");
+const stage4 = document.querySelector("#stage4");
 const after1 = document.querySelector("#after1");
 const after2 = document.querySelector("#after2");
 const after3 = document.querySelector("#after3");
@@ -21,12 +22,13 @@ const img2 = document.getElementById("test_id2");
 const img3 = document.getElementById("test_id3");
 const img4 = document.getElementById("test_id4");
 const img5 = document.getElementById("test_id5");
+const img6 = document.getElementById("test_id6"); //stage4
 
 let Lovescore = 50;
 const endpoint = 10;
 
 select = [];
-stages = [stage1, stage2, stage3];
+stages = [stage1, stage2, stage3, stage4];
 afters = [
   after1,
   after2,
@@ -113,6 +115,12 @@ function check(stageNum) {
     document.body.style.backgroundImage = `url('${backgrounds[2]}')`;
     img5.src = "./img/투명종이.png";
     goNext((stageNum + 1) * 3 + 1 / 2);
+  } else if (stageNum === 3 && qnaList[qIdx]["a"][idx]["score"] === 2) {
+    img6.src = "./img/부끄리오.png";
+    return;
+  } else if (stageNum === 3 && qnaList[qIdx]["a"][idx]["score"] === 0) {
+    img6.src = "./img/난처리오.png";
+    return;
   }
 }
 
@@ -178,6 +186,10 @@ function addAnswer(answerText, qIdx, idx) {
         }
       }, 450);
       var q = document.querySelector(".qBox");
+      if (qIdx === 9) {
+        goNext(10);
+        return;
+      }
       q.innerHTML = afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]];
       img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
       setTimeout(() => {
@@ -190,7 +202,7 @@ function addAnswer(answerText, qIdx, idx) {
 
 function goNext(qIdx) {
   if (qIdx === endpoint) {
-    goResult();
+    goStage(3);
     return;
   } else if (qIdx % 3 === 0 && qIdx != 0) {
     goStage(qIdx / 3 - 1);
