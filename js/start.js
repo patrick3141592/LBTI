@@ -190,8 +190,6 @@ function addAnswer(answerText, qIdx, idx) {
         return;
       }
       Lovescore += 5 * (qnaList[qIdx]["a"][idx]["score"] - 1);
-      var Love = document.querySelector(".LoveBar");
-      Love.style.width = Lovescore + "%";
       q.innerHTML = afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]];
       img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
       setTimeout(() => {
@@ -217,13 +215,14 @@ function goNext(qIdx) {
     qIdx = qIdx - 1 / 2;
   }
 
+  var score = document.querySelector(".ls");
+  score.innerHTML = Lovescore;  
+
   var q = document.querySelector(".qBox");
   q.innerHTML = qnaList[qIdx].q;
   for (let i in qnaList[qIdx].a) {
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
   }
-  var Love = document.querySelector(".LoveBar");
-  Love.style.width = Lovescore + "%";
 }
 
 function begin() {

@@ -45,8 +45,9 @@
 
 .heart {
   position: absolute;
-  top: 7%;
-  left: 8%;
+  top: 7%;  
+  display: block;
+  margin-left: 28%;
 }
 
 .Love {
@@ -74,12 +75,14 @@
 .bi {
   stroke: pink;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ls {
   position: absolute;
-  top: 8%;
-  left: 23%;
+  top: 10%;
+  left: 25%;
 }
 
 body { overflow: hidden; }
