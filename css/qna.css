@@ -81,3 +81,6 @@
   top: 8%;
   left: 23%;
 }
+
+body { overflow: hidden; }
+body * { touch-action: none; }
