@@ -177,6 +177,9 @@ function addAnswer(answerText, qIdx, idx) {
         children[i].style.WebkitAnimation = " fadeOutAndStayTransparent 3s";
         children[i].style.animation = " fadeOutAndStayTransparent 3s";
       }
+      var score = document.querySelector(".ls");
+      Lovescore += 5 * (qnaList[qIdx]["a"][idx]["score"] - 1);
+      score.innerHTML = Lovescore;
       setTimeout(() => {
         select[qIdx] = idx;
         console.log(afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]]);
@@ -189,7 +192,6 @@ function addAnswer(answerText, qIdx, idx) {
         goNext(10);
         return;
       }
-      Lovescore += 5 * (qnaList[qIdx]["a"][idx]["score"] - 1);
       q.innerHTML = afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]];
       img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
       setTimeout(() => {
@@ -216,7 +218,7 @@ function goNext(qIdx) {
   }
 
   var score = document.querySelector(".ls");
-  score.innerHTML = Lovescore;  
+  score.innerHTML = Lovescore;
 
   var q = document.querySelector(".qBox");
   q.innerHTML = qnaList[qIdx].q;
