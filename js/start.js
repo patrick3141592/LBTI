@@ -214,7 +214,15 @@ function addAnswer(answerText, qIdx, idx) {
         return;
       }
       q.innerHTML = afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]];
-      img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
+      if (qIdx === 4 && qnaList[qIdx]["a"][idx]["score"] === 0) {
+        document.body.style.backgroundImage = `url('${backgrounds[3]}')`;
+        img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
+        setTimeout(() => {
+          document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
+        }, 3000);
+      } else {
+        img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
+      }
       setTimeout(() => {
         if (qIdx === 2) {
           q.style.backgroundColor = "rgb(135, 206, 235)";
