@@ -260,6 +260,15 @@ function addAnswer(answerText, qIdx, idx) {
             goNext(++qIdx);
           }, 5999);
           return;
+        } else if (qIdx === 3) {
+          q.style.backgroundColor = "rgb(231, 186, 253)";
+          q.innerHTML =
+            "맛있는 불초밥이다! 흰 옷을 입은 리오, \n 팔 옆에 소스를 흘린다. 닦아주려고 하는데.. ";
+          setTimeout(() => {
+            q.style.backgroundColor = "rgb(255, 179, 204)";
+            goNext(++qIdx);
+            return;
+          }, 3000);
         } else {
           q.style.backgroundColor = "rgb(255, 179, 204)";
           goNext(++qIdx);
