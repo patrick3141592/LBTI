@@ -60,8 +60,8 @@ function check(stageNum) {
   ]; // List of background images
   if (Lovescore < 50 && stageNum === 0) {
     img1.src = "./img/경멸리오.png";
-    var kkkkkk = document.querySelector(".hogamdo");
-    kkkkkk.innerHTML = Lovescore;
+    var kkkkk = document.querySelector(".hogamdo");
+    kkkkk.innerHTML = Lovescore;
     return;
   } else if (Lovescore >= 50 && stageNum === 0) {
     document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
