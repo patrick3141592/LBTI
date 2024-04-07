@@ -69,7 +69,7 @@ function check(stageNum) {
     // Increment the background index
     currentBackgroundIndex++;
 
-    var kkkkkk = document.querySelector(".hogamdo");
+    var kkkkkk = document.querySelector(".hogamdo2");
     kkkkkk.innerHTML = Lovescore;
 
     // If the index exceeds the number of backgrounds, reset it to 0
