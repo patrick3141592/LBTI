@@ -55,3 +55,12 @@
     opacity: 0;
   }
 }
+
+@keyframes Transparent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

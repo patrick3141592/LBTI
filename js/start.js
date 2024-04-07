@@ -45,6 +45,10 @@ afters = [
 imgList = ["./img/당황리오.png", "./img/웃음리오.png", "./img/수줍리오.png"];
 let currentBackgroundIndex = 0; // Index of the current background image
 
+function Letsgoout(stageNum) {
+  var q = document.querySelector(".qBox");
+}
+
 function goafter(qIdx) {}
 
 function check(stageNum) {
@@ -52,6 +56,7 @@ function check(stageNum) {
     "https://patrick3141592.github.io/img/%EC%8C%8D%ED%95%99.jpg",
     "https://patrick3141592.github.io/img/%EC%BA%A0%EA%B3%B5.jpg",
     "https://patrick3141592.github.io/img/%ED%8F%90%EB%A7%89%EC%A0%9C%EB%A6%AC%EC%98%A4.png",
+    "https://patrick3141592.github.io/img/%EC%B4%88%EB%B0%A5%ED%9D%98%EB%A6%B0%EB%A6%AC%EC%98%A4.png",
   ]; // List of background images
   if (Lovescore < 50 && stageNum === 0) {
     img1.src = "./img/경멸리오.png";
@@ -175,11 +180,13 @@ function addAnswer(answerText, qIdx, idx) {
     "click",
     function () {
       var children = document.querySelectorAll(".answerList");
+
       for (let i = 0; i < children.length; i++) {
         children[i].disabled = true;
         children[i].style.WebkitAnimation = " fadeOutAndStayTransparent 3s";
         children[i].style.animation = " fadeOutAndStayTransparent 3s";
       }
+
       var score = document.querySelector(".ls");
       Lovescore += 5 * (qnaList[qIdx]["a"][idx]["score"] - 1);
       score.innerHTML = Lovescore;
@@ -198,7 +205,55 @@ function addAnswer(answerText, qIdx, idx) {
       q.innerHTML = afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]];
       img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
       setTimeout(() => {
-        goNext(++qIdx);
+        if (qIdx === 2) {
+          q.style.backgroundColor = "rgb(135, 206, 235)";
+          q.innerHTML =
+            "오늘부터 축제한다는데, 나랑 샤운드 오브 뮤직 공연 보러 갈래?";
+          setTimeout(() => {
+            if (Lovescore >= 50) {
+              q.style.backgroundColor = "rgb(255, 179, 204)";
+              img5.src = "./img/수줍리오.png";
+              q.innerHTML = "그래! 좋아!!";
+            } else {
+              q.style.backgroundColor = "rgb(255, 179, 204)";
+              img5.src = "./img/난처리오.png";
+              q.innerHTML = "미안.. 나 집에 가고 싶어..";
+            }
+          }, 3000);
+
+          setTimeout(() => {
+            q.style.backgroundColor = "rgb(255, 179, 204)";
+            img5.src = "./img/배고파리오.png";
+            goNext(++qIdx);
+          }, 5999);
+          return;
+        } else if (qIdx === 5) {
+          q.style.backgroundColor = "rgb(135, 206, 235)";
+          q.innerHTML =
+            "어느덧 해가 지고, 리오와 헤어진 후 집에 도착했다. 문득 리오가 생각나고, 용기를 내 카톡을 보내보기로 한다.";
+          setTimeout(() => {
+            if (Lovescore >= 65) {
+              q.style.backgroundColor = "transparent";
+              img5.src = "./img/수줍리오.png";
+              q.innerHTML = " ";
+            } else {
+              q.style.backgroundColor = "transparent";
+              img5.src = "./img/리오안읽씹.jpg";
+              q.innerHTML = " ";
+            }
+          }, 3000);
+
+          setTimeout(() => {
+            q.style.backgroundColor = "rgb(255, 179, 204)";
+            goNext(++qIdx);
+          }, 5999);
+          return;
+        } else {
+          setTimeout(() => {
+            q.style.backgroundColor = "rgb(255, 179, 204)";
+            goNext(++qIdx);
+          }, 0);
+        }
       }, 3000);
     },
     false
@@ -210,6 +265,7 @@ function goNext(qIdx) {
     goStage(3);
     return;
   } else if (qIdx % 3 === 0 && qIdx != 0) {
+    Letsgoout(qIdx / 3 - 1);
     goStage(qIdx / 3 - 1);
     return;
   } else if (2 * qIdx === 7) {
