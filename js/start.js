@@ -217,6 +217,7 @@ function addAnswer(answerText, qIdx, idx) {
 
       setTimeout(() => {
         if (qIdx === 2) {
+          img5.src = "./img/그냥리오.png";
           q.style.backgroundColor = "rgb(135, 206, 235)";
           q.innerHTML =
             "오늘부터 축제한다는데, 나랑 샤운드 오브 뮤직 공연 보러 갈래?";
@@ -291,6 +292,13 @@ function goNext(qIdx) {
 
   var q = document.querySelector(".qBox");
   q.innerHTML = qnaList[qIdx].q;
+  if (qIdx === 8) {
+    img5.src = "./img/부끄리오.png";
+  } else if (qIdx === 9) {
+    img5.src = "./img/투명종이.png";
+  } else {
+    img5.src = "./img/그냥리오.png";
+  }
   for (let i in qnaList[qIdx].a) {
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
   }
