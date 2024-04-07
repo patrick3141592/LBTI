@@ -95,7 +95,6 @@ function check(stageNum) {
   } else if (Lovescore >= 65 && stageNum === 1) {
     document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
 
-
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
     setTimeout(() => {
@@ -124,7 +123,6 @@ function check(stageNum) {
         qna.style.display = "block";
       }, 450);
     });
-
 
     console.log((stageNum + 1) * 3 + 1 / 2);
     document.body.style.backgroundImage = `url('${backgrounds[2]}')`;
@@ -194,8 +192,8 @@ function addAnswer(answerText, qIdx, idx) {
 
       for (let i = 0; i < children.length; i++) {
         children[i].disabled = true;
-        children[i].style.WebkitAnimation = " fadeOutAndStayTransparent 3s";
-        children[i].style.animation = " fadeOutAndStayTransparent 3s";
+        children[i].style.WebkitAnimation = " fadeOutAndStayTransparent 3.3s";
+        children[i].style.animation = " fadeOutAndStayTransparent 3.3s";
       }
 
       var score = document.querySelector(".ls");
