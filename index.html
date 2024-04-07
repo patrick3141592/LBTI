@@ -72,9 +72,20 @@
           <input type = "text" placeholder = "플레이어명을 입력해주세요.">
         </form>
       -->
-        <button type="button" class="btn btn-danger btn-lg mt-3" style="background-color: hotpink;" onclick="js:begin()";>
+        <button type="button" id="IAmButton" class="btn btn-danger btn-lg mt-3" style="background-color: hotpink;" onclick=overClick();>
           눌러서 시작하기
         </button>
+        <script>
+          var click = true;
+          function overClick() {
+               if (click) {
+                    click = !click;
+                    js:begin();
+               } else {
+                    console.log("중복");
+               }
+          }
+          </script>
       </section>
 
       <section id="qna">
@@ -199,7 +210,7 @@
         <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <img
             id="test_id2"
-            src="./img/경멸리오.png"
+            src="./img/리오안읽씹.jpg"
             alt="mainImage"
             class="img-fluid"
           />
@@ -244,7 +255,8 @@
         <button
           type="button"
           class="fancybtn sharebutton"
-          onclick="js:kakaoShare()"
+          onclick="js:kakao
+          Share()"
         >
           공유하기
         </button>

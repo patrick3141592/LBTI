@@ -27,6 +27,13 @@ const img6 = document.getElementById("test_id6"); //stage4
 let Lovescore = 50;
 const endpoint = 10;
 
+const backgrounds = [
+  "https://patrick3141592.github.io/img/%EC%8C%8D%ED%95%99.jpg",
+  "https://patrick3141592.github.io/img/%EC%BA%A0%EA%B3%B5.jpg",
+  "https://patrick3141592.github.io/img/%ED%8F%90%EB%A7%89%EC%A0%9C%EB%A6%AC%EC%98%A4.png",
+  "https://patrick3141592.github.io/img/%EC%B4%88%EB%B0%A5%ED%9D%98%EB%A6%B0%EB%A6%AC%EC%98%A4.png",
+]; // List of background images
+
 select = [];
 stages = [stage1, stage2, stage3, stage4];
 afters = [
@@ -52,12 +59,6 @@ function Letsgoout(stageNum) {
 function goafter(qIdx) {}
 
 function check(stageNum) {
-  const backgrounds = [
-    "https://patrick3141592.github.io/img/%EC%8C%8D%ED%95%99.jpg",
-    "https://patrick3141592.github.io/img/%EC%BA%A0%EA%B3%B5.jpg",
-    "https://patrick3141592.github.io/img/%ED%8F%90%EB%A7%89%EC%A0%9C%EB%A6%AC%EC%98%A4.png",
-    "https://patrick3141592.github.io/img/%EC%B4%88%EB%B0%A5%ED%9D%98%EB%A6%B0%EB%A6%AC%EC%98%A4.png",
-  ]; // List of background images
   if (Lovescore < 50 && stageNum === 0) {
     img1.src = "./img/경멸리오.png";
     var kkkkk = document.querySelector(".hogamdo2");
@@ -94,9 +95,8 @@ function check(stageNum) {
     return;
   } else if (Lovescore >= 65 && stageNum === 1) {
     document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
-
-    stages[stageNum].style.Webkitanimation = "fadeOut 1s";
-    stages[stageNum].style.animation = "fadeOut 1s";
+    stages[stageNum].style.Webkitanimation = "fadeOut 0.5s";
+    stages[stageNum].style.animation = "fadeOut 0.5s";
     setTimeout(() => {
       qna.style.Webkitanimation = "fadeIn 0.01s";
       qna.style.animation = "fadeIn 0.01s";
@@ -107,6 +107,7 @@ function check(stageNum) {
     });
     console.log((stageNum + 1) * 3 + 1 / 2);
     goNext((stageNum + 1) * 3 + 1 / 2);
+    return;
   } else if (Lovescore < 70 && stageNum === 2) {
     img3.src = "./img/난처리오.png";
     var kkkkkk = document.querySelector(".hogamdo4");
@@ -199,6 +200,7 @@ function addAnswer(answerText, qIdx, idx) {
       var score = document.querySelector(".ls");
       Lovescore += 5 * (qnaList[qIdx]["a"][idx]["score"] - 1);
       score.innerHTML = Lovescore;
+      img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
       setTimeout(() => {
         select[qIdx] = idx;
         console.log(afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]]);
@@ -212,15 +214,7 @@ function addAnswer(answerText, qIdx, idx) {
         return;
       }
       q.innerHTML = afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]];
-      if (qIdx === 4 && qnaList[qIdx]["a"][idx]["score"] === 0) {
-        document.body.style.backgroundImage = `url('${backgrounds[3]}')`;
-        img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
-        setTimeout(() => {
-          document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
-        }, 3000);
-      } else {
-        img5.src = imgList[qnaList[qIdx]["a"][idx]["score"]];
-      }
+
       setTimeout(() => {
         if (qIdx === 2) {
           q.style.backgroundColor = "rgb(135, 206, 235)";
@@ -247,7 +241,7 @@ function addAnswer(answerText, qIdx, idx) {
         } else if (qIdx === 5) {
           q.style.backgroundColor = "rgb(135, 206, 235)";
           q.innerHTML =
-            "어느덧 해가 지고, 리오와 헤어진 후 집에 도착했다. 문득 리오가 생각나고, 용기를 내 카톡을 보내보기로 한다.";
+            "어느덧 해가 지고, 리오와 헤어진 후 집에 도착했다. \n 문득 리오가 생각나고, 용기를 내 카톡을 보내보기로 한다.";
           setTimeout(() => {
             if (Lovescore >= 65) {
               q.style.backgroundColor = "transparent";
@@ -266,10 +260,9 @@ function addAnswer(answerText, qIdx, idx) {
           }, 5999);
           return;
         } else {
-          setTimeout(() => {
-            q.style.backgroundColor = "rgb(255, 179, 204)";
-            goNext(++qIdx);
-          }, 0);
+          q.style.backgroundColor = "rgb(255, 179, 204)";
+          goNext(++qIdx);
+          return;
         }
       }, 3000);
     },
