@@ -218,23 +218,23 @@ function addAnswer(answerText, qIdx, idx) {
       setTimeout(() => {
         if (qIdx === 2) {
           img5.src = "./img/그냥리오.png";
-          q.style.backgroundColor = "rgb(135, 206, 235)";
+          q.style.backgroundColor = "rgb(231, 186, 253)";
           q.innerHTML =
             "오늘부터 축제한다는데, 나랑 샤운드 오브 뮤직 공연 보러 갈래?";
           setTimeout(() => {
             if (Lovescore >= 50) {
-              q.style.backgroundColor = "rgb(255, 179, 204)";
+              q.style.backgroundColor = "rgb(231, 186, 253)";
               img5.src = "./img/수줍리오.png";
               q.innerHTML = "그래! 좋아!!";
             } else {
-              q.style.backgroundColor = "rgb(255, 179, 204)";
+              q.style.backgroundColor = "rgb(231, 186, 253)";
               img5.src = "./img/난처리오.png";
               q.innerHTML = "미안.. 나 집에 가고 싶어..";
             }
           }, 3000);
 
           setTimeout(() => {
-            q.style.backgroundColor = "rgb(255, 179, 204)";
+            q.style.backgroundColor = "rgb(231, 186, 253)";
             img5.src = "./img/배고파리오.png";
             goNext(++qIdx);
           }, 5999);
@@ -256,12 +256,12 @@ function addAnswer(answerText, qIdx, idx) {
           }, 3000);
 
           setTimeout(() => {
-            q.style.backgroundColor = "rgb(255, 179, 204)";
+            q.style.backgroundColor = "rgb(231, 186, 253)";
             goNext(++qIdx);
           }, 5999);
           return;
         } else {
-          q.style.backgroundColor = "rgb(255, 179, 204)";
+          q.style.backgroundColor = "rgb(231, 186, 253)";
           goNext(++qIdx);
           return;
         }
@@ -296,6 +296,10 @@ function goNext(qIdx) {
     img5.src = "./img/부끄리오.png";
   } else if (qIdx === 9) {
     img5.src = "./img/투명종이.png";
+  } else if (qIdx === 2) {
+    img5.src = "./img/궁금리오.png";
+  } else if (qIdx === 0) {
+    img5.src = "./img/웃음리오.png";
   } else {
     img5.src = "./img/그냥리오.png";
   }
