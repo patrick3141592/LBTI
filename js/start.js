@@ -88,14 +88,12 @@ function check(stageNum) {
     goNext((stageNum + 1) * 3 + 1 / 2);
   } else if (Lovescore < 65 && stageNum === 1) {
     img2.src = "./img/리오안읽씹.jpg";
-    var kkkkkk = document.querySelector(".hogamdo");
+    var kkkkkk = document.querySelector(".hogamdo3");
     kkkkkk.innerHTML = Lovescore;
     return;
   } else if (Lovescore >= 65 && stageNum === 1) {
     document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
 
-    var kkkkkk = document.querySelector(".hogamdo");
-    kkkkkk.innerHTML = Lovescore;
 
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
     stages[stageNum].style.animation = "fadeOut 1s";
@@ -111,7 +109,7 @@ function check(stageNum) {
     goNext((stageNum + 1) * 3 + 1 / 2);
   } else if (Lovescore < 70 && stageNum === 2) {
     img3.src = "./img/난처리오.png";
-    var kkkkkk = document.querySelector(".hogamdo");
+    var kkkkkk = document.querySelector(".hogamdo4");
     kkkkkk.innerHTML = Lovescore;
     return;
   } else if (Lovescore >= 70 && stageNum === 2) {
@@ -126,8 +124,6 @@ function check(stageNum) {
       }, 450);
     });
 
-    var kkkkkk = document.querySelector(".hogamdo");
-    kkkkkk.innerHTML = Lovescore;
 
     console.log((stageNum + 1) * 3 + 1 / 2);
     document.body.style.backgroundImage = `url('${backgrounds[2]}')`;
@@ -135,12 +131,12 @@ function check(stageNum) {
     goNext((stageNum + 1) * 3 + 1 / 2);
   } else if (stageNum === 3 && qnaList[qIdx]["a"][idx]["score"] === 2) {
     img6.src = "./img/부끄리오.png";
-    var kkkkkk = document.querySelector(".hogamdo");
+    var kkkkkk = document.querySelector(".hogamdo5");
     kkkkkk.innerHTML = Lovescore;
     return;
   } else if (stageNum === 3 && qnaList[qIdx]["a"][idx]["score"] === 0) {
     img6.src = "./img/난처리오.png";
-    var kkkkkk = document.querySelector(".hogamdo");
+    var kkkkkk = document.querySelector(".hogamdo5");
     kkkkkk.innerHTML = Lovescore;
     return;
   }
