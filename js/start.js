@@ -90,6 +90,7 @@ function check(stageNum) {
     img2.src = "./img/리오안읽씹.jpg";
     var kkkkkk = document.querySelector(".hogamdo3");
     kkkkkk.innerHTML = Lovescore;
+    console.log("here");
     return;
   } else if (Lovescore >= 65 && stageNum === 1) {
     document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
