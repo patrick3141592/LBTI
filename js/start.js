@@ -88,7 +88,7 @@ function check(stageNum) {
     console.log((stageNum + 1) * 3 + 1 / 2);
     goNext((stageNum + 1) * 3 + 1 / 2);
   } else if (Lovescore < 65 && stageNum === 1) {
-    img2.src = "./img/리오안읽씹.jpg";
+    img2.src = "./img/리오안읽씹진짜.png";
     var kkkkkk = document.querySelector(".hogamdo3");
     kkkkkk.innerHTML = Lovescore;
     console.log("here");
@@ -245,19 +245,22 @@ function addAnswer(answerText, qIdx, idx) {
           setTimeout(() => {
             if (Lovescore >= 65) {
               q.style.backgroundColor = "transparent";
-              img5.src = "./img/수줍리오.png";
+              img5.style.height = "360px";
+              img5.src = "./img/리오카톡성공.jpg";
               q.innerHTML = " ";
             } else {
               q.style.backgroundColor = "transparent";
-              img5.src = "./img/리오안읽씹.jpg";
+              img5.style.height = "360px";
+              img5.src = "./img/리오안읽씹진짜.png";
               q.innerHTML = " ";
             }
           }, 3000);
 
           setTimeout(() => {
             q.style.backgroundColor = "rgb(255, 179, 204)";
+            img5.style.height = "300px";
             goNext(++qIdx);
-          }, 5999);
+          }, 6999);
           return;
         } else if (qIdx === 3) {
           q.style.backgroundColor = "rgb(231, 186, 253)";
@@ -267,7 +270,7 @@ function addAnswer(answerText, qIdx, idx) {
             q.style.backgroundColor = "rgb(255, 179, 204)";
             goNext(++qIdx);
             return;
-          }, 3000);
+          }, 3500);
         } else {
           q.style.backgroundColor = "rgb(255, 179, 204)";
           goNext(++qIdx);
