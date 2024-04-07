@@ -235,7 +235,6 @@ function addAnswer(answerText, qIdx, idx) {
 
           setTimeout(() => {
             q.style.backgroundColor = "rgb(255, 179, 204)";
-            img5.src = "./img/배고파리오.png";
             goNext(++qIdx);
           }, 5999);
           return;
@@ -309,6 +308,8 @@ function goNext(qIdx) {
     img5.src = "./img/궁금리오.png";
   } else if (qIdx === 0) {
     img5.src = "./img/웃음리오.png";
+  } else if (qIdx === 3) {
+    img5.src = "./img/배고파리오.png";
   } else {
     img5.src = "./img/그냥리오.png";
   }
