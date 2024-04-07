@@ -56,7 +56,7 @@ function check(stageNum) {
   if (Lovescore < 50 && stageNum === 0) {
     img1.src = "./img/경멸리오.png";
     var kkkkkk = document.querySelector(".hogamdo");
-      
+
     kkkkkk.innerHTML = Lovescore;
     return;
   } else if (Lovescore >= 50 && stageNum === 0) {
