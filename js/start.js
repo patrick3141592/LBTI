@@ -1,5 +1,6 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
+const love = document.querySelector('#love');
 const result = document.querySelector("#result");
 const stage1 = document.querySelector("#stage1");
 const stage2 = document.querySelector("#stage2");
@@ -164,11 +165,16 @@ function setResult() {
 function goResult() {
   qna.style.Webkitanimation = "fadeOut 1s";
   qna.style.animation = "fadeOut 1s";
+
+  love.style.WebkitAnimation = 'fadeOut 1s';
+  love.style.animation = 'fadeOut 1s';
+
   setTimeout(() => {
     result.style.Webkitanimation = "fadeIn 1s";
     result.style.animation = "fadeIn 1s";
     setTimeout(() => {
       qna.style.display = "none";
+      love.style.display = 'none';
       result.style.display = "block";
     }, 450);
   });
@@ -358,9 +364,14 @@ function begin() {
       setTimeout(() => {
         qna.style.Webkitanimation = "fadeIn 1s";
         qna.style.animation = "fadeIn 1s";
+
+        love.style.WebkitAnimation = 'fadeIn 1s';
+        love.style.animation = 'fadeIn 1s';
+
         setTimeout(() => {
           stage0.style.display = "none";
           qna.style.display = "block";
+          love.style.display = 'block';
         }, 450);
         let qIdx = 0;
         goNext(qIdx);
