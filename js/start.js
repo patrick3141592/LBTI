@@ -1,6 +1,6 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
-const love = document.querySelector('#love');
+const love = document.querySelector("#love");
 const result = document.querySelector("#result");
 const stage1 = document.querySelector("#stage1");
 const stage2 = document.querySelector("#stage2");
@@ -57,11 +57,12 @@ function Letsgoout(stageNum) {
   var q = document.querySelector(".qBox");
 }
 
-function check(stageNum, idx='') {
+function check(stageNum, idx = "") {
   if (Lovescore < 50 && stageNum === 0) {
     img1.src = "./img/경멸리오.png";
     var kkkkk = document.querySelector(".hogamdo2");
     kkkkk.innerHTML = `호감도: ${Lovescore}`;
+    love.style.display = "none";
     return;
   } else if (Lovescore >= 50 && stageNum === 0) {
     document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
@@ -91,6 +92,7 @@ function check(stageNum, idx='') {
     var kkkkkk = document.querySelector(".hogamdo3");
     kkkkkk.innerHTML = `호감도: ${Lovescore}`;
     console.log("here");
+    love.style.display = "none";
     return;
   } else if (Lovescore >= 65 && stageNum === 1) {
     document.body.style.backgroundImage = `url('${backgrounds[1]}')`;
@@ -111,6 +113,7 @@ function check(stageNum, idx='') {
     img3.src = "./img/난처리오.png";
     var kkkkkk = document.querySelector(".hogamdo4");
     kkkkkk.innerHTML = `호감도: ${Lovescore}`;
+    love.style.display = "none";
     return;
   } else if (Lovescore >= 70 && stageNum === 2) {
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
@@ -132,16 +135,18 @@ function check(stageNum, idx='') {
     img6.src = "./img/부끄리오.png";
     var kkkkkk = document.querySelector(".hogamdo5");
     kkkkkk.innerHTML = `호감도: ${Lovescore}`;
+    love.style.display = "none";
     return;
   } else if (stageNum === 3 && qnaList[9]["a"][idx]["score"] === 0) {
     img6.src = "./img/난처리오.png";
     var kkkkkk = document.querySelector(".hogamdo5");
     kkkkkk.innerHTML = `호감도: ${Lovescore}`;
+    love.style.display = "none";
     return;
   }
 }
 
-function goStage(stageNum, idx='') {
+function goStage(stageNum, idx = "") {
   const stage = stages[stageNum];
   qna.style.Webkitanimation = "fadeOut 0.5s";
   qna.style.animation = "fadeOut 0.5s";
@@ -164,15 +169,15 @@ function goResult() {
   qna.style.Webkitanimation = "fadeOut 1s";
   qna.style.animation = "fadeOut 1s";
 
-  love.style.Webkitanimation = 'fadeOut 1s';
-  love.style.animation = 'fadeOut 1s';
+  love.style.Webkitanimation = "fadeOut 1s";
+  love.style.animation = "fadeOut 1s";
 
   setTimeout(() => {
     result.style.Webkitanimation = "fadeIn 1s";
     result.style.animation = "fadeIn 1s";
     setTimeout(() => {
       qna.style.display = "none";
-      love.style.display = 'none';
+      love.style.display = "none";
       result.style.display = "block";
     }, 450);
   });
@@ -286,7 +291,7 @@ function addAnswer(answerText, qIdx, idx) {
   );
 }
 
-function goNext(qIdx, idx='') {
+function goNext(qIdx, idx = "") {
   if (qIdx === endpoint) {
     goStage(3, idx);
     return;
@@ -363,13 +368,13 @@ function begin() {
         qna.style.Webkitanimation = "fadeIn 1s";
         qna.style.animation = "fadeIn 1s";
 
-        love.style.WebkitAnimation = 'fadeIn 1s';
-        love.style.animation = 'fadeIn 1s';
+        love.style.WebkitAnimation = "fadeIn 1s";
+        love.style.animation = "fadeIn 1s";
 
         setTimeout(() => {
           stage0.style.display = "none";
           qna.style.display = "block";
-          love.style.display = 'block';
+          love.style.display = "block";
         }, 450);
         let qIdx = 0;
         goNext(qIdx);
