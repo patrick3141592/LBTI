@@ -166,7 +166,7 @@ function goResult() {
   qna.style.Webkitanimation = "fadeOut 1s";
   qna.style.animation = "fadeOut 1s";
 
-  love.style.WebkitAnimation = 'fadeOut 1s';
+  love.style.Webkitanimation = 'fadeOut 1s';
   love.style.animation = 'fadeOut 1s';
 
   setTimeout(() => {
