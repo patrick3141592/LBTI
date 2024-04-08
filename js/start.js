@@ -6,6 +6,8 @@ const stage1 = document.querySelector("#stage1");
 const stage2 = document.querySelector("#stage2");
 const stage3 = document.querySelector("#stage3");
 const stage4 = document.querySelector("#stage4");
+const stage7 = document.querySelector("#stage7");
+const stage8 = document.querySelector("#stage8");
 const after1 = document.querySelector("#after1");
 const after2 = document.querySelector("#after2");
 const after3 = document.querySelector("#after3");
@@ -24,7 +26,8 @@ const img3 = document.getElementById("test_id3");
 const img4 = document.getElementById("test_id4");
 const img5 = document.getElementById("test_id5");
 const img6 = document.getElementById("test_id6"); //stage4
-
+const img7 = document.getElementById("test_id7");
+const img8 = document.getElementById("test_id8");
 let Lovescore = 50;
 const endpoint = 10;
 
@@ -36,7 +39,7 @@ const backgrounds = [
 ]; // List of background images
 
 select = [];
-stages = [stage1, stage2, stage3, stage4];
+stages = [stage1, stage2, stage3, stage4, stage7, stage8];
 afters = [
   after1,
   after2,
@@ -110,7 +113,7 @@ function check(stageNum, idx = "") {
     goNext((stageNum + 1) * 3 + 1 / 2);
     return;
   } else if (Lovescore < 70 && stageNum === 2) {
-    img3.src = "./img/난처리오.png";
+    img3.src = "./img/긁적리오.png";
     var kkkkkk = document.querySelector(".hogamdo4");
     kkkkkk.innerHTML = `호감도: ${Lovescore}`;
     love.style.display = "none";
@@ -132,17 +135,56 @@ function check(stageNum, idx = "") {
     img5.src = "./img/투명종이.png";
     goNext((stageNum + 1) * 3 + 1 / 2);
   } else if (stageNum === 3 && qnaList[9]["a"][idx]["score"] === 2) {
-    img6.src = "./img/부끄리오.png";
-    var kkkkkk = document.querySelector(".hogamdo5");
-    kkkkkk.innerHTML = `호감도: ${Lovescore}`;
-    love.style.display = "none";
-    return;
+    if (Lovescore >= 85) {
+      console.log("stage4");
+      img6.src = "./img/부끄리오.png";
+      var kkkkkk = document.querySelector(".hogamdo5");
+      kkkkkk.innerHTML = `호감도: ${Lovescore}`;
+      love.style.display = "none";
+      return;
+    } else if (Lovescore < 85) {
+      stages[3].style.Webkitanimation = "fadeOut 0.5s";
+      stages[3].style.animation = "fadeOut 0.5s";
+      setTimeout(() => {
+        stages[4].style.Webkitanimation = "fadeIn 0.5s";
+        stages[4].style.animation = "fadeIn 0.5s";
+        setTimeout(() => {
+          stages[3].style.display = "none";
+          stages[4].style.display = "block";
+        }, 450);
+      });
+      img7.src = "./img/경멸리오.png";
+      var kkkkkkkk = document.querySelector(".hogamdo7");
+      kkkkkkkk.innerHTML = `호감도: ${Lovescore}`;
+      love.style.display = "none";
+      return;
+    }
   } else if (stageNum === 3 && qnaList[9]["a"][idx]["score"] === 0) {
-    img6.src = "./img/난처리오.png";
-    var kkkkkk = document.querySelector(".hogamdo5");
-    kkkkkk.innerHTML = `호감도: ${Lovescore}`;
-    love.style.display = "none";
-    return;
+    if (Lovescore >= 85) {
+      console.log("stage8");
+      stages[3].style.Webkitanimation = "fadeOut 0.5s";
+      stages[3].style.animation = "fadeOut 0.5s";
+      setTimeout(() => {
+        stages[5].style.Webkitanimation = "fadeIn 0.5s";
+        stages[5].style.animation = "fadeIn 0.5s";
+        setTimeout(() => {
+          stages[3].style.display = "none";
+          stages[5].style.display = "block";
+        }, 450);
+      });
+      img8.src = "./img/우는리오진짜.png";
+      var kkk = document.querySelector(".hogamdo8");
+      kkk.innerHTML = `호감도: ${Lovescore}`;
+      love.style.display = "none";
+      return;
+    } else if (Lovescore < 85) {
+      console.log("stage4");
+      img6.src = "./img/부끄리오.png";
+      var kkkkkk = document.querySelector(".hogamdo5");
+      kkkkkk.innerHTML = `호감도: ${Lovescore}`;
+      love.style.display = "none";
+      return;
+    }
   }
 }
 
