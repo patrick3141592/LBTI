@@ -57,13 +57,11 @@ function Letsgoout(stageNum) {
   var q = document.querySelector(".qBox");
 }
 
-function goafter(qIdx) {}
-
-function check(stageNum) {
+function check(stageNum, idx='') {
   if (Lovescore < 50 && stageNum === 0) {
     img1.src = "./img/경멸리오.png";
     var kkkkk = document.querySelector(".hogamdo2");
-    kkkkk.innerHTML = Lovescore;
+    kkkkk.innerHTML = `호감도: ${Lovescore}`;
     return;
   } else if (Lovescore >= 50 && stageNum === 0) {
     document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`;
@@ -91,7 +89,7 @@ function check(stageNum) {
   } else if (Lovescore < 65 && stageNum === 1) {
     img2.src = "./img/리오안읽씹진짜.png";
     var kkkkkk = document.querySelector(".hogamdo3");
-    kkkkkk.innerHTML = Lovescore;
+    kkkkkk.innerHTML = `호감도: ${Lovescore}`;
     console.log("here");
     return;
   } else if (Lovescore >= 65 && stageNum === 1) {
@@ -112,7 +110,7 @@ function check(stageNum) {
   } else if (Lovescore < 70 && stageNum === 2) {
     img3.src = "./img/난처리오.png";
     var kkkkkk = document.querySelector(".hogamdo4");
-    kkkkkk.innerHTML = Lovescore;
+    kkkkkk.innerHTML = `호감도: ${Lovescore}`;
     return;
   } else if (Lovescore >= 70 && stageNum === 2) {
     stages[stageNum].style.Webkitanimation = "fadeOut 1s";
@@ -130,20 +128,20 @@ function check(stageNum) {
     document.body.style.backgroundImage = `url('${backgrounds[2]}')`;
     img5.src = "./img/투명종이.png";
     goNext((stageNum + 1) * 3 + 1 / 2);
-  } else if (stageNum === 3 && qnaList[qIdx]["a"][idx]["score"] === 2) {
+  } else if (stageNum === 3 && qnaList[9]["a"][idx]["score"] === 2) {
     img6.src = "./img/부끄리오.png";
     var kkkkkk = document.querySelector(".hogamdo5");
-    kkkkkk.innerHTML = Lovescore;
+    kkkkkk.innerHTML = `호감도: ${Lovescore}`;
     return;
-  } else if (stageNum === 3 && qnaList[qIdx]["a"][idx]["score"] === 0) {
+  } else if (stageNum === 3 && qnaList[9]["a"][idx]["score"] === 0) {
     img6.src = "./img/난처리오.png";
     var kkkkkk = document.querySelector(".hogamdo5");
-    kkkkkk.innerHTML = Lovescore;
+    kkkkkk.innerHTML = `호감도: ${Lovescore}`;
     return;
   }
 }
 
-function goStage(stageNum) {
+function goStage(stageNum, idx='') {
   const stage = stages[stageNum];
   qna.style.Webkitanimation = "fadeOut 0.5s";
   qna.style.animation = "fadeOut 0.5s";
@@ -155,7 +153,7 @@ function goStage(stageNum) {
       stage.style.display = "block";
     }, 450);
   });
-  check(stageNum);
+  check(stageNum, idx);
 }
 
 function setResult() {
@@ -216,7 +214,7 @@ function addAnswer(answerText, qIdx, idx) {
       }, 2999);
       var q = document.querySelector(".qBox");
       if (qIdx === 9) {
-        goNext(10);
+        goNext(10, idx);
         return;
       }
       q.innerHTML = afterList[qIdx][qnaList[qIdx]["a"][idx]["score"]];
@@ -288,9 +286,9 @@ function addAnswer(answerText, qIdx, idx) {
   );
 }
 
-function goNext(qIdx) {
+function goNext(qIdx, idx='') {
   if (qIdx === endpoint) {
-    goStage(3);
+    goStage(3, idx);
     return;
   } else if (qIdx % 3 === 0 && qIdx != 0) {
     Letsgoout(qIdx / 3 - 1);
