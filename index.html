@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/qna.css" />
+    <link rel="stylesheet" href="css/love.css" />
     <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/result.css" />
     <link rel="stylesheet" href="css/stage0.css" />
@@ -40,6 +41,8 @@
     <link rel="stylesheet" href="css/stage3.css" />
     <link rel="stylesheet" href="css/stage4.css" />
     <link rel="stylesheet" href="css/stage6.css" />
+    <link rel="stylesheet" href="css/stage7.css" />
+    <link rel="stylesheet" href="css/stage8.css" />
     <link rel="stylesheet" href="css/btn.css" />
     <script
       src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
@@ -72,18 +75,30 @@
           <input type = "text" placeholder = "플레이어명을 입력해주세요.">
         </form>
       -->
-        <button type="button" class="btn btn-danger btn-lg mt-3" style="background-color: hotpink;" onclick="js:begin()";>
+        <button type="button" id="IAmButton" class="btn btn-danger btn-lg mt-3" style="background-color: hotpink;" onclick=overClick();>
           눌러서 시작하기
         </button>
+        <script>
+          var click = true;
+          function overClick() {
+               if (click) {
+                    click = !click;
+                    js:begin();
+               } else {
+                    console.log("중복");
+               }
+          }
+          </script>
       </section>
-
-      <section id="qna">
+      <section id="love">
         <div class="heart">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="auto" fill="pink" class="bi bi-heart-fill" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="pink" class="bi bi-heart-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
           </svg>
           <div class="ls" style="font-size: 45px;"></div>
         </div>
+      </section>
+      <section id="qna">
         <!--
           <h4 class="js-sayHello" color = "black"></h4>
           -->
@@ -138,7 +153,7 @@
         <button
           type="button"
           class="fancybtn sharebutton"
-          onclick="js:kakaoShare()"
+          onclick="js:kakaoShare('fail1')"
         >
           공유하기
         </button>
@@ -172,23 +187,23 @@
         <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <img
             id="test_id1"
-            src="./img/리오안읽씹.jpg"
+            src="./img/리오안읽씹진짜.png"
             alt="mainImage"
             class="img-fluid"
           />
         </div>
         
         <h4 class="js-sayHello" color="black"></h4>
-        <h2> "아니.. 나 집에 가고 싶어.." </h2>
+        <h2> 데이트 신청 실패...!!! </h2>
         <div class="hogamdo2"></div>
         <p>
-          리오와 연애 실패...!!!<br />
-          데이트 신청 실패_연애 초보
+          "아니.. 나 집에 가고 싶어.."<br />
+          리오와 연애 실패
         </p>
         <button
           type="button"
           class="fancybtn sharebutton"
-          onclick="js:kakaoShare()"
+          onclick="js:kakaoShare('fail1')"
         >
           공유하기
         </button>
@@ -199,23 +214,24 @@
         <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <img
             id="test_id2"
-            src="./img/경멸리오.png"
+            src="./img/리오안읽씹진짜.png"
             alt="mainImage"
             class="img-fluid"
           />
         </div>
         
-        <h4 class="js-sayHello" color="black"></h4>
+        <h4 class="js-sayHello" color="black"
+        ></h4>
+        <h2> 안읽씹 엔딩...!!! </h2>
         <div class="hogamdo3"></div>
         <p>
-          그렇게 리오는 종강일까지 내 연락을 보지 않았다.. <br />
-          잘 지내겠지?<br />
-          안읽씹_연애 중수
+          그렇게 리오는 종강일까지 내 연락을 <br />
+          보지 않았다.. 잘 지내겠지?<br />
         </p>
         <button
           type="button"
           class="fancybtn sharebutton"
-          onclick="js:kakaoShare()"
+          onclick="js:kakaoShare('fail3')"
         >
           공유하기
         </button>
@@ -234,16 +250,16 @@
         </div>
         
         <h4 class="js-sayHello" color="black"></h4>
-        <h2> "아니.. 나 집에 가고 싶어.." </h2>
+        <h2> 썸붕 엔딩...!!! </h2>
         <div class="hogamdo4"></div>
         <p>
-          리오와 연애 실패...!!!<br />
-          썸붕_연애 이론 고수!
+          "근데 나 네가 이성으로 느껴지지 않아...<br />
+           미안.."
         </p>
         <button
           type="button"
           class="fancybtn sharebutton"
-          onclick="js:kakaoShare()"
+          onclick="js:kakaoShare('fail2')"
         >
           공유하기
         </button>
@@ -255,27 +271,87 @@
         <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
           <img
             id="test_id6"
-            src="./img/수줍리오.png"
+            src="./img/부끄리오.png"
             alt="mainImage"
             class="img-fluid"
           />
         </div>
         
         <h4 class="js-sayHello" color="black"></h4>
-        <h2> "오늘부터 1일...!" </h2>
+        <h2> 리오와 연애 성공..! </h2>
         <div class="hogamdo5"></div>
         <p>
-          리오와 연애 성공..!
+          "오늘부터 1일...!"
         </p>
         <button
           type="button"
           class="fancybtn sharebutton"
-          onclick="js:kakaoShare()"
+          onclick="js:kakaoShare('success')"
         >
           공유하기
         </button>
         
       </section>
+
+
+    
+      <section id="stage7" class="mx-auto pb-5 px-4">
+        <h2 class="pt-5">리오 연애 시뮬레이션</h2>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
+          <img
+            id="test_id7"
+            src="./img/리오안읽씹진짜.png"
+            alt="mainImage"
+            class="img-fluid"
+          />
+        </div>
+        
+        <h4 class="js-sayHello" color="black"
+        ></h4>
+        <h2> 성급한 손 잡기...! </h2>
+        <div class="hogamdo7"></div>
+        <p>
+          갑자기 손을 왜 잡아....? <br />
+          좀 당황스럽네.. 연락하지마<br />
+        </p>
+        <button
+          type="button"
+          class="fancybtn sharebutton"
+          onclick="js:kakaoShare('fail4')"
+        >
+          공유하기
+        </button>
+      </section>
+        
+
+        <section id="stage8" class="mx-auto pb-5 px-4">
+          <h2 class="pt-5">리오 연애 시뮬레이션</h2>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-12 mx-auto">
+            <img
+              id="test_id8"
+              src="./img/리오안읽씹진짜.png"
+              alt="mainImage"
+              class="img-fluid"
+            />
+          </div>
+          
+          <h4 class="js-sayHello" color="black"
+          ></h4>
+          <h2> 타이밍을 놓쳤다...! </h2>
+          <div class="hogamdo8"></div>
+          <p>
+            너는 내가 이성으로 느껴지지 않는구나.. <br />
+            이젠 좀 지친다.. 잘 지내.. <br />
+          </p>
+          <button
+            type="button"
+            class="fancybtn sharebutton"
+            onclick="js:kakaoShare('fail5')"
+          >
+            공유하기
+          </button>
+        </section>
+          
 
       <script src="./js/data.js" charset="utf-8"></script>
       <script src="./js/start.js" charset="utf-8"></script>
