@@ -374,55 +374,25 @@ function goNext(qIdx, idx = "") {
 
 function begin() {
   //소개팅 장면이란 걸 언급해주어야 할 것 같아서, main -> qna로 넘어가기 전에 stage0.css로 넘어가려합니당 그리고 5초정도 interval 두고 넘어갈 것 같아요
-  main.style.Webkitanimation = "fadeOut 2s";
-  main.style.animation = "fadeOut 2s";
+  main.style.Webkitanimation = "fadeOut 1s";
+  main.style.animation = "fadeOut 1s";
+
   setTimeout(() => {
-    stage6.style.Webkitanimation = "fadeIn 2s";
-    stage6.style.animation = "fadeIn 2s";
+    qna.style.Webkitanimation = "fadeIn 1s";
+    qna.style.animation = "fadeIn 1s";
+
+    love.style.WebkitAnimation = "fadeIn 1s";
+    love.style.animation = "fadeIn 1s";
 
     setTimeout(() => {
-      document.body.style.backgroundImage = `url('https://patrick3141592.github.io/img/%EC%9E%90%ED%95%98%EC%97%B0.jpg')`;
-      stage6.style.display = "block";
-      setTimeout(() => {
-        main.style.display = "none";
-      }, 100);
-    }, 1500);
-  });
-  setTimeout(() => {
-    stage6.style.Webkitanimation = "fadeOut 2s";
-    stage6.style.animation = "fadeOut 2s";
-    setTimeout(() => {
-      stage0.style.Webkitanimation = "fadeIn 2s";
-      stage0.style.animation = "fadeIn 2s";
-
-      setTimeout(() => {
-        document.body.style.backgroundImage = `url('https://patrick3141592.github.io/img/%EC%9E%90%ED%95%98%EC%97%B0.jpg')`;
-        stage0.style.display = "block";
-        stage6.style.display = "none";
-      }, 1500);
-    });
-
-    setTimeout(() => {
-      stage0.style.Webkitanimation = "fadeOut 1s";
-      stage0.style.animation = "fadeOut 1s";
-
-      setTimeout(() => {
-        qna.style.Webkitanimation = "fadeIn 1s";
-        qna.style.animation = "fadeIn 1s";
-
-        love.style.WebkitAnimation = "fadeIn 1s";
-        love.style.animation = "fadeIn 1s";
-
-        setTimeout(() => {
-          stage0.style.display = "none";
-          qna.style.display = "block";
-          love.style.display = "block";
-        }, 450);
-        let qIdx = 0;
-        goNext(qIdx);
-      }, 450);
-    }, 7000);
-  }, 7000);
+      stage0.style.display = "none";
+      main.style.display = "none";
+      qna.style.display = "block";
+      love.style.display = "block";
+    }, 450);
+    let qIdx = 0;
+    goNext(qIdx);
+  }, 450);
 }
 
 function saveName() {
